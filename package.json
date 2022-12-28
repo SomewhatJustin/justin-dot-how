@@ -1,0 +1,25 @@
+{
+  "name": "justin-dot-how",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./tailwind.css -o ./_site/css/styles.css --watch",
+    "prod": "npx tailwindcss -i ./tailwind.css -o ./_site/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SomewhatJustin/justin-dot-how.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SomewhatJustin/justin-dot-how/issues"
+  },
+  "homepage": "https://github.com/SomewhatJustin/justin-dot-how#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy"
+  }
+}
