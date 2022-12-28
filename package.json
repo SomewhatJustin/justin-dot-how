@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/SomewhatJustin/justin-dot-how#readme",
   "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy"
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "netlify-cli": "^12.5.0"
   }
 }
