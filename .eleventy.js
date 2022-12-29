@@ -1,3 +1,4 @@
+const pluginDate = require('eleventy-plugin-date');
 module.exports = function (eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy("./styles.css");
-}
+  eleventyConfig.addPlugin(pluginDate);
+};

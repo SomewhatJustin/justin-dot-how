@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SomewhatJustin/justin-dot-how#readme",
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
+    "eleventy-plugin-date": "^1.0.0",
     "netlify-cli": "^12.5.0"
   }
 }
