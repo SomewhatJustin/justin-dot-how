@@ -72,3 +72,7 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
+
+.italic {
+  font-style: italic;
+}
