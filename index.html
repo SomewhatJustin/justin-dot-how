@@ -1,0 +1,10 @@
+---
+layout: layout.html
+---
+<p>Hi! Welcome to my website. It's a work in progress.</p>
+<h2>My Writing</h2>
+<ul>
+  {% for post in collections.post %}
+  <li class=""><a href="{{ post.url}}">{{ post.data.title }}</li>
+  {% endfor %}  
+</ul>
