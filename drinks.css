@@ -21,7 +21,7 @@ body {
     padding: 15px;
     position: relative;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 .slide-header {
@@ -121,7 +121,6 @@ body {
 /* Mobile-specific adjustments */
 @media screen and (max-width: 480px) {
     .powerpoint-slide {
-        width: 95%;
         padding: 10px;
         border-width: 5px;
     }
