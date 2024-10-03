@@ -76,3 +76,7 @@ a:hover {
 .italic {
   font-style: italic;
 }
+
+img {
+  width: 100%;
+}
