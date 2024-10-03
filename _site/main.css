@@ -33,8 +33,12 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: var(--header-bg-color);
   padding: 1rem;
+  z-index: 1000; /* Ensure the header is above other content */
 }
 
 nav {
@@ -59,7 +63,7 @@ nav a:hover {
 main {
   max-width: 750px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 2.5rem 1rem 0; /* Adjust top padding to account for the fixed header */
 }
 
 h1 {
