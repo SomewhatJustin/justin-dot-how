@@ -57,35 +57,26 @@ nav {
 
 nav a {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline; /* Add underline to make links look clickable */
+  text-decoration-color: var(--link-color); /* Set initial underline color */
   margin-left: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
-}
-
-nav a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  border-radius: 5px;
-  z-index: -1;
-  transform: scale(0);
-  transition: transform 0.3s ease;
+  font-size: 1.3rem; /* Increase font size for better visibility */
+  padding: 0.5rem 0; /* Adjust padding for a cleaner look */
+  border-bottom: 2px solid transparent; /* Add underline effect */
 }
 
 nav a:hover {
-  color: #333333;
+  color: #ffffff; /* Keep the text color white on hover */
+  text-decoration-color: var(--accent-color); /* Change underline color on hover */
 }
 
-nav a:hover::before {
-  transform: scale(1);
+nav a::before {
+  content: none;
 }
 
 main {
