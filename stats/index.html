@@ -1,0 +1,42 @@
+---
+layout: layout.html
+title: System Statistics
+---
+
+<h1>Raspberry Pi System Statistics</h1>
+
+<div class="stats-container">
+  <section class="stats-section">
+    <h2>Temperature</h2>
+    <p>Current: {{ systemStats.temperature.main }}°C</p>
+    <p>Maximum: {{ systemStats.temperature.max }}°C</p>
+  </section>
+
+  <section class="stats-section">
+    <h2>Memory</h2>
+    <p>Total: {{ systemStats.memory.total }} GB</p>
+    <p>Used: {{ systemStats.memory.used }} GB</p>
+    <p>Free: {{ systemStats.memory.free }} GB</p>
+  </section>
+
+  <section class="stats-section">
+    <h2>CPU</h2>
+    <p>Manufacturer: {{ systemStats.cpu.manufacturer }}</p>
+    <p>Model: {{ systemStats.cpu.brand }}</p>
+    <p>Speed: {{ systemStats.cpu.speed }} GHz</p>
+    <p>Cores: {{ systemStats.cpu.cores }}</p>
+  </section>
+
+  <section class="stats-section">
+    <h2>Operating System</h2>
+    <p>Platform: {{ systemStats.os.platform }}</p>
+    <p>Distribution: {{ systemStats.os.distro }}</p>
+    <p>Release: {{ systemStats.os.release }}</p>
+    <p>Kernel: {{ systemStats.os.kernel }}</p>
+  </section>
+
+  <section class="stats-section">
+    <h2>Uptime</h2>
+    <p>{{ systemStats.uptime.system }} hours</p>
+  </section>
+</div>
