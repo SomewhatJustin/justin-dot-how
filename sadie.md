@@ -19,8 +19,6 @@ Linux comes in many "flavors", known as distributions or "distros" for short. I 
 
 Linux Mint also comes pre-installed with a lot of useful software. The text editor I'm using right now came with it. So did "Cinnamon", which is the "desktop environment" that's running. The desktop environment controls how your system and apps appear. It includes things like your windowing manager (try dragging this window as far to the right as you can), your "start button" (see bottom left of screen), your taskbar (bottom), and many other things. Crucially, this means that if you don't like your desktop envirionment, you can change it! I use one called KDE Plasma.
 
-I have also installed Minecraft on here as well. It comes with Java and Bedrock. I hear that Java runs better on Linux, but it could be worth trying both. I tested the Java edition and tweaked some of the settings for you so that it runs nicely.
-
 ## Remember...
 This is *your* computer! I encourage you to try clicking around, tweaking things, making things look different, going into settings, etc. You may even want to try a different desktop environment or a different Linux distro. You can do that! It isn't as hard as it sounds. Maybe a good place to start would be to change the desktop background. Don't you think it looks a little uggo?
 
@@ -28,7 +26,7 @@ If you don't like Linux, you can also switch to Windows. You could even "dual bo
 
 ## Cool Things You Can Do
 Figure them out on your own or ask me for help, but you can:
-1. Make your own website
+1. Make your own website (Fun fact: this website is running on my Raspberry Pi! A very smol computer.)
 2. Use the SD card reader to import photos from your camera and edit them
 3. Switch to another version of Linux, like Ubuntu, Fedora (the one I use), Arch (the hardcore one), or others. Even Windows.
 4. Run *multiple* operating systems on the same laptop. I've done this.
@@ -48,7 +46,7 @@ Figure them out on your own or ask me for help, but you can:
 ## Helpful Tips
 1. Hit the Windows logo on the keyboard to bring up your launcher. This will get you to any app you want. If you start typing after hitting Windows, it will search everything for you.
 2. To install more apps, open the app named "Software Manager". You can find it using the previous tip. I already see that there is a games section and one of the games is called "Blobby" and it looks really dumb. You should try it.
-3. This laptop has an SD Card reader. Remember that camera I gave you a few years ago? It saves photos using an SD card. You should try putting the card in the laptop and see what happens. Maybe try opening Files.
+3. This laptop has an SD Card reader. Remember that camera I gave you a few years ago? Or the one Ryan got you? It saves photos using an SD card. You should try putting the card in the laptop and see what happens. Maybe try opening Files.
 
 I hope you enjoy your gift. Please let me know if you need help with anything. We can learn together!
 
