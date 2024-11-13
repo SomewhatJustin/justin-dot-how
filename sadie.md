@@ -5,7 +5,7 @@ Hi Sadie,
 
 First of all, happy 11th birthday! Welcome to your laptop.
 
-If you pull up to the function with this laptop, you'll be the cool kid, because your laptop runs *Linux*. The cool thing about Linux is that it is *free and open source*. This means that all the code is available online for anyone to see and contribute to. Anyone with the skills can submit changes to the Linux operating system. This is not the case with macOS and Windows, where only a small group of engineers that work at Apple or Microsoft can make those changes.
+If you pull up to the function with this laptop, you'll be the cool kid, because your laptop runs *Linux*. The cool thing about Linux is that it is *free and open source*. This means that all the code is available online for anyone to see and contribute to. Anyone with the skills can submit changes to the Linux operating system. This is not the case with macOS and Windows, where only employees can make those changes.
 
 What this means is that if there's something I don't like about Linux, I can propose a change and if it gets accepted, *everyone running Linux will be able to benefit from that change*.
 

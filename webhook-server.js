@@ -29,6 +29,7 @@ app.post('/github-update', (req, res) => {
 
 app.get('/github-update', (req, res) => {
   res.send('Webhook server is running!');
+  console.log('Received a request to check the webhook server');
 });
 
 
