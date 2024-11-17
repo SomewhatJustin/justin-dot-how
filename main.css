@@ -7,7 +7,7 @@
   --link-hover-color: #004499;
   --header-bg-color: #f8f8f8;
   --base-header-color: 2, 48, 71; /* RGB values for #023047 */
-  --accent-color: 214, 40, 40; /* RGB values for #023047 */
+  --accent-color: 214, 40, 40; /* RGB values for #d62828 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,29 +41,79 @@ header {
   z-index: 1000; /* Ensure the header is above other content */
 }
 
-nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 750px;
   margin: 0 auto;
+  padding: 0 2rem 0 1rem;
 }
 
-nav a {
+.nav-brand a {
   color: var(--text-color);
   text-decoration: none;
-  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: var(--link-hover-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: var(--header-bg-color);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
 }
 
 main {
   max-width: 750px;
   margin: 2rem auto;
   padding: 2.5rem 1rem 0; /* Adjust top padding to account for the fixed header */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 4rem; /* Adjust top padding to account for the fixed header */
+    padding: 0;
+  }
 }
 
 h1 {
@@ -110,7 +160,7 @@ img {
   padding: 0.5rem;
   border-radius: 5px;
   color: white;
-  background-color: rgba(var(--accent-color), .75); /* Fully opaque */;
+  background-color: rgba(var(--accent-color), 0.75);
 }
 
 .video-container {
@@ -155,5 +205,4 @@ img {
 
 .photo-item {
   display: inline-block;
-  margin: 10px;
 }

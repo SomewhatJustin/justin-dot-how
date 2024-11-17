@@ -9,17 +9,23 @@
   </head>
   <body class="">
     <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
+    <nav>
+      <div class="nav-container">
+        <span class="nav-brand">
+          <a id="my-name" href="/">Justin Fowler</a>
+        </span>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <div class="nav-links">
           <span><a href="/about">About</a></span>
           <span><a href="/projects">Projects</a></span>
           <span><a href="/photography">Photography</a></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
     <main>
       
     <h1>A new midlife crisis every other week</h1>
@@ -48,5 +54,11 @@ The psychologists Shane Frederick and George Lowenstein have studied this phenom
 </blockquote>
 <p>We default to living in a way that focuses entirely on what we're getting out of life. Of pursuing pleasure, avoiding pain, reaching for money, success, and fame. And when we become dissatisfied, doubling down or trying a radically new approach, thinking that when we figure it out <em>this time</em>, we'll arrive at that promised land.</p>
 </main>
+      <script>
+    document.querySelector(".nav-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+  
   </body>
 </html>

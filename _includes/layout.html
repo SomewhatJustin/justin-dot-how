@@ -8,22 +8,12 @@
     <title>Justin Fowler's Website</title>
   </head>
   <body class="">
-    <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
-        </div>
-      </nav>
-    </header>
+    {% include "header.html" %}
     <main>
       {% if title %}
     <h1>{{ title }}</h1>
     {% endif %}
       {{ content }}</main>
+      {% include "scripts.html" %}
   </body>
 </html>

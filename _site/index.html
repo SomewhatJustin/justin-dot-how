@@ -9,17 +9,23 @@
   </head>
   <body class="">
     <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
+    <nav>
+      <div class="nav-container">
+        <span class="nav-brand">
+          <a id="my-name" href="/">Justin Fowler</a>
+        </span>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <div class="nav-links">
           <span><a href="/about">About</a></span>
           <span><a href="/projects">Projects</a></span>
           <span><a href="/photography">Photography</a></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
     <main>
       
       <p class="italic">Welcome to my website!</p><p>My name is Justin—I'm a Software Engineer at <a href="https://futo.org">FUTO</a>.</p>
@@ -45,5 +51,11 @@
     
 </ul>
 </main>
+      <script>
+    document.querySelector(".nav-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+  
   </body>
 </html>
