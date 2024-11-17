@@ -5,7 +5,7 @@ title: Photography
 <ul>
     {% for photo in collections.photos %}
       <li class="photo-item">
-        <img src="/{{ photo.path | url }}" alt="{{ photo.name }}">
+        <img src="/{{ photo.path | url }}" loading="lazy" alt="{{ photo.name }}">
       </li>
     {% endfor %}
   </ul>

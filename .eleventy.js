@@ -12,7 +12,9 @@ module.exports = function (eleventyConfig) {
   // Add a custom collection to list photos in the 'photography' folder
   eleventyConfig.addCollection("photos", function() {
     const photoFolder = "./photography";
-    return fs.readdirSync(photoFolder).map(fileName => ({
+    return fs.readdirSync(photoFolder)
+    .filter(fileName => !fileName.endsWith('.html'))
+    .map(fileName => ({
       name: fileName,
       path: path.join(photoFolder, fileName)
     }));
