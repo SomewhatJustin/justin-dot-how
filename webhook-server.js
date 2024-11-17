@@ -9,6 +9,7 @@ app.use(express.json());
 
 app.post('/github-update', (req, res) => {
   console.log('Received a GitHub webhook event:', req.body);
+  req.setTimeout(600000);
 
   exec('/home/justin/Developer/justin-dot-how/update.sh &', (error, stdout, stderr) => {
     if (error) {
