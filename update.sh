@@ -1,5 +1,18 @@
 #!/bin/bash
-cd /home/justin/Developer/justin-dot-how
-git pull origin main  # Replace 'main' with your default branch if different
-/usr/bin/npm ci  # Install any new dependencies
-/usr/bin/npm run eleventy  # Rebuild the site
+cd /home/justin/Developer/justin-dot-how || exit 1
+
+# Log file
+LOGFILE="/home/justin/Developer/justin-dot-how/update.log"
+
+echo "Starting update: $(date)" >> "$LOGFILE"
+
+# Pull the latest changes
+git pull origin main >> "$LOGFILE" 2>&1
+
+# Install dependencies
+/usr/bin/npm ci >> "$LOGFILE" 2>&1
+
+# Rebuild the site
+/usr/bin/npm run eleventy >> "$LOGFILE" 2>&1
+
+echo "Update completed: $(date)" >> "$LOGFILE"
