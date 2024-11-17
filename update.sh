@@ -16,6 +16,6 @@ git pull origin main >> "$LOGFILE" 2>&1
 /usr/bin/npm ci >> "$LOGFILE" 2>&1
 
 # Rebuild the site
-/usr/bin/npm run eleventy >> "$LOGFILE" 2>&1
+/usr/bin/npm run eleventy --port 8080 >> "$LOGFILE" 2>&1
 
 echo "Update completed: $(date)" >> "$LOGFILE"
