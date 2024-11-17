@@ -152,3 +152,8 @@ img {
 .stats-section p {
   margin: 0.5rem 0;
 }
+
+.photo-item {
+  display: inline-block;
+  margin: 10px;
+}

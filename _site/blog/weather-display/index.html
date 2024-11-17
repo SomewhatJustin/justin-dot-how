@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Justin Fowler's Website</title>
+  </head>
+  <body class="">
+    <header>
+      <nav>
+        <div class="">
+          <span class=""
+            ><a id="my-name" href="/">Justin Fowler</a></span
+          >
+          <span><a href="/about">About</a></span>
+          <span><a href="/projects">Projects</a></span>
+          <span><a href="/photography">Photography</a></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      
+    <h1>I built a low-power weather display</h1>
+    
+      <p>Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a problem: I want to know how cold it is outside so I can dress appropriately.</p>
+<p>Now, this is a great use-case for a voice assistant. But I don't want to talk to Google in the morning! Just not a great way to start the day.</p>
+<p>So I built this:
+<img src="/assets/weather-pi.jpeg" alt="weather station"></p>
+<p>This is my Raspberry Pi weather station. It's cheap (less $50 total) and fun to set up.</p>
+<p>First of all, I am amazed at what this $15 computer can do. I recommend using the Raspberry Pi Imager and enabling WiFi and SSH access. After plugging it in and waiting for a couple of minutes, it was ready to go. Updating did take some time, but it probably wasn't necessary. After some troubleshooting (make sure to enable the SPI interface! details in the <a href="https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_Manual">waveshare manual</a>) I got the example program to run.</p>
+<p>Once there, I used the Open Weather API to pull down the current temperature for my location and pass that to the imaging function that waveshare provides.</p>
+<p>Finally, I set up a cronjob to run at the top of every hour to get the current weather.</p>
+<p><strong>Hardware</strong></p>
+<ul>
+<li><a href="https://www.adafruit.com/product/3708">Raspberry Pi Zero WH</a></li>
+<li><a href="https://www.amazon.com/waveshare-2-13inch-HAT-Compatible-Resolution/dp/B071S8HT76?crid=3693PUAB2PBH5&amp;dib=eyJ2IjoiMSJ9.n27JVboHa9voOuVmQ55lH-CvGYjX49xWpWSwJE2KQ9cocFy84yx-u2RuUMgXoCy_Tk9TlBBNwLRywZKMQJu922iThN7Ddu8uUjcIgCR397Gk7RSbkIQ10PGp9C-DK2gG_bldU3sYr08Sxd9KZLXtPURIZdWjzpgxJDGbgAcT05Czk7O6N1Hfyei9qTh0NkZZga2yocKFPqv1kt3sFTQ3HLNrpW-QlpVQFu6JGq1nkg8.sxwjLBqT4H5r5_6WBvmuziix-NVF67IXDRHKzqiJDds&amp;dib_tag=se&amp;keywords=waveshare+eink&amp;qid=1731865612&amp;sprefix=waveshare+eink%2Caps%2C169&amp;sr=8-3">waveshare 2.13inch E-Ink Display HAT V4</a></li>
+<li>Micro SD card (I used a class 4 and it's fine)</li>
+<li>Power adapter and cable (ideally use ones you already have)</li>
+</ul>
+<p><strong>Software</strong>
+All my code is open source and <a href="https://github.com/SomewhatJustin/weather-station">available on GitHub</a>. You'll want to check out the <a href="https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_Manual">waveshare manual</a>, which has a dedicated section for Raspberry Pi.</p>
+</main>
+  </body>
+</html>
