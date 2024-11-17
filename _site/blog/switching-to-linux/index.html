@@ -9,17 +9,23 @@
   </head>
   <body class="">
     <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
+    <nav>
+      <div class="nav-container">
+        <span class="nav-brand">
+          <a id="my-name" href="/">Justin Fowler</a>
+        </span>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <div class="nav-links">
           <span><a href="/about">About</a></span>
           <span><a href="/projects">Projects</a></span>
           <span><a href="/photography">Photography</a></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
     <main>
       
     <h1>My Linux Journey After 12 Years of macOS</h1>
@@ -30,5 +36,11 @@
 <p>That said, Linux is freeing and fun. Do you know how many permission dialogs I've been bombarded with? Exactly zero.</p>
 <p>I started my journey with a $200 ThinkPad I found on Facebook Marketplace. It’s a fantastic way to experiment with different distros. Switching can be challenging, but it's not impossible. Along the way, I've learned so much.</p>
 </main>
+      <script>
+    document.querySelector(".nav-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+  
   </body>
 </html>

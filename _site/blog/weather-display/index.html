@@ -9,17 +9,23 @@
   </head>
   <body class="">
     <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
+    <nav>
+      <div class="nav-container">
+        <span class="nav-brand">
+          <a id="my-name" href="/">Justin Fowler</a>
+        </span>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <div class="nav-links">
           <span><a href="/about">About</a></span>
           <span><a href="/projects">Projects</a></span>
           <span><a href="/photography">Photography</a></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
     <main>
       
     <h1>I built a low-power weather display</h1>
@@ -42,5 +48,11 @@
 <p><strong>Software</strong>
 All my code is open source and <a href="https://github.com/SomewhatJustin/weather-station">available on GitHub</a>. You'll want to check out the <a href="https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_Manual">waveshare manual</a>, which has a dedicated section for Raspberry Pi.</p>
 </main>
+      <script>
+    document.querySelector(".nav-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+  
   </body>
 </html>

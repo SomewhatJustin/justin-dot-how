@@ -9,17 +9,23 @@
   </head>
   <body class="">
     <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
+    <nav>
+      <div class="nav-container">
+        <span class="nav-brand">
+          <a id="my-name" href="/">Justin Fowler</a>
+        </span>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+        <div class="nav-links">
           <span><a href="/about">About</a></span>
           <span><a href="/projects">Projects</a></span>
           <span><a href="/photography">Photography</a></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
+  
     <main>
       
     <h1>Hiking in Austin and Central Texas</h1>
@@ -44,5 +50,11 @@
 The park is also rated a 3 on the <a href="http://www.bigskyastroclub.org/lp_bortle.html">Bortle Scale</a>, meaning you'll get a chance to see the Milky Way.
 <img src="/assets/IMG_3753.jpeg" alt="IMG_3753.jpeg"></p>
 </main>
+      <script>
+    document.querySelector(".nav-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+  
   </body>
 </html>

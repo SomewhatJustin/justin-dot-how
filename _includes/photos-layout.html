@@ -8,19 +8,9 @@
     <title>Justin Fowler's Website</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="">
-          <span class=""
-            ><a id="my-name" href="/">Justin Fowler</a></span
-          >
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
-        </div>
-      </nav>
-    </header>
+    {% include "header.html" %}
     <main style="width: 98%; max-width: 10000px;">
       {{ content }}</main>
+      {% include "scripts.html" %}
   </body>
 </html>

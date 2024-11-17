@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("photos", function() {
     const photoFolder = "./photography";
     return fs.readdirSync(photoFolder)
-    .filter(fileName => !fileName.endsWith('.html'))
+    .filter(fileName => !fileName.endsWith('index.html'))
     .map(fileName => ({
       name: fileName,
       path: path.join(photoFolder, fileName)

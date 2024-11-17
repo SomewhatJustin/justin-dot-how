@@ -2,11 +2,9 @@
 layout: photos-layout.html
 title: Photography
 ---
-<ul>
+
     {% for photo in collections.photos %}
-      <li class="photo-item">
-        <img src="/{{ photo.path | url }}" loading="lazy" alt="{{ photo.name }}">
-      </li>
+        <img src="/{{ photo.path | url }}" class="photo-item" loading="lazy" alt="{{ photo.name }}">
     {% endfor %}
-  </ul>
+  
   
