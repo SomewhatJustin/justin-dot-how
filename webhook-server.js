@@ -11,7 +11,7 @@ app.post('/github-update', (req, res) => {
   // You can add additional verification for security if needed
 
   // Log the request for debugging purposes
-  console.log('Received a GitHub webhook event:', req.body);
+  console.log('Received GitHub webhook event:', req.body);
 
   // Execute the update script
   exec('/home/justin/Developer/justin-dot-how/update.sh', (error, stdout, stderr) => {
