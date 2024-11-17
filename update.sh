@@ -6,6 +6,9 @@ LOGFILE="/home/justin/Developer/justin-dot-how/update.log"
 
 echo "Starting update: $(date)" >> "$LOGFILE"
 
+# Kill any running eleventy
+pkill -f "npm run eleventy"
+
 # Pull the latest changes
 git pull origin main >> "$LOGFILE" 2>&1
 
