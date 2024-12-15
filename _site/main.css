@@ -123,19 +123,19 @@ h1 {
 }
 
 h2 {
-  color: rgba(var(--base-header-color), 0.8); /* Slightly transparent */
+  color: rgba(var(--base-header-color), 0.9); /* Slightly transparent */
 }
 
 h3 {
-  color: rgba(var(--base-header-color), 0.6); /* More transparent */
+  color: rgba(var(--base-header-color), 0.8); /* More transparent */
 }
 
 h4 {
-  color: rgba(var(--base-header-color), 0.4); /* Even more transparent */
+  color: rgba(var(--base-header-color), 0.7); /* Even more transparent */
 }
 
 h5 {
-  color: rgba(var(--base-header-color), 0.2); /* Most transparent */
+  color: rgba(var(--base-header-color), 0.6); /* Most transparent */
 }
 
 a {
@@ -161,6 +161,24 @@ img {
   border-radius: 5px;
   color: white;
   background-color: rgba(var(--accent-color), 0.75);
+}
+
+#blog-post-list {
+  list-style-type: none;
+  padding-left: none;
+  padding: 0px;
+}
+
+#blog-post-list li {
+  border-radius: 5px;
+  background: none;
+  border: 1px solid #eee
+  margin: 10px 0px;
+  padding: 4px;
+}
+
+#blog-post-list li a {
+  color: #333;
 }
 
 .video-container {
@@ -206,3 +224,4 @@ img {
 .photo-item {
   display: inline-block;
 }
+
