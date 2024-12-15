@@ -1,6 +1,19 @@
 ---
 title: Why I went back to college
 ---
+**Update - December 2024**
+
+After spending more time in the college system, my beliefs about what it's good for and not good for are quite different.
+
+My biggest takeaway is that you shouldn't return to college expecting to learn. That's not what it's good for. Of course you can learn while in college, but most of that will occur outside the classroom. 
+
+As a math student, I found that most classes weren't testing if you _understood_ the material, but rather if you could perform certain tasks. There were some notable exceptions - I had a Linear Algebra professor who refused to teach the course like most of the other professors in that he tested for intuition. Most of the students didn't like it and he had to apply strong curves to get enough students to pass.
+
+I also have doubts about the signalling value of a degree. Grade inflation, cheating, and ChatGPT mean that the bar to graduate is much lower. Not to say that the students at my school weren't intelligent. Even as the oldest student in the room, I was often humbled by others' intellect. But the next time I find myself as a hiring manager, I can't imagine being swayed strongly by one's college attendance. At best, _admittance_ to a top-tier university is a positive signal, but whether they graduated is unimportant.
+
+For anyone already in a high-paying job, returning to college can be incredibly costly. Tuition doesn't come cheap, but the greater cost is oppurtunity. If you're making $150,000 in total compensation and return and can't work full time, your total cost of attendance surpasses six-figures. This is a hard number to justify, but not out of the question.
+
+I have 18 credit hours to go before I graduate, and I'm currently working full-time as a software engineer, which was the raison d'être for completing my degree. In my four reasons listed in the following post for why I returned to college, only one still applies - I would like to finish what I started. But oppurtunity cost rears its ugly head again. What could I be doing instead? As of today, I am not sure if I will graduate.
 
 _Note: this was originally written ~August 2023._
 
