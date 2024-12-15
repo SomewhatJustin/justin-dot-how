@@ -1,5 +1,6 @@
 ---
 title: Hiking in Austin and Central Texas
+date: 2023-05-01
 ---
 
 As someone who likes to hike, I'm often asked where my favorite spots are. Assuming you're starting from Austin, here are my favorite spots organized by how far you need to drive:

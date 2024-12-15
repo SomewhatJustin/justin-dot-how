@@ -1,5 +1,6 @@
 ---
 title: Why I went back to college
+date: 2024-12-15
 ---
 **Update - December 2024**
 

@@ -1,5 +1,6 @@
 ---
 title: My Linux Journey After 12 Years of macOS
+date: 2024-10-15
 ---
 
 Over the last few months, I've become obsessed with Linux. After 12 years as a full-time macOS user, I've switched entirely.

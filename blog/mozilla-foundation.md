@@ -1,5 +1,6 @@
 ---
 title: My Application for the Mozilla Foundation
+date: 2024-03-01
 ---
 
 I began my application to the [Mozilla Tech + Society Fellowship](https://foundation.mozilla.org/en/what-we-fund/fellowships/fellows-for-tech-and-society/) before realizing I didn't fit the criteria. I did spend some time thinking at a very high level about my vision for the internet, so I thought I'd share it here.

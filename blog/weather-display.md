@@ -1,5 +1,6 @@
 ---
 title: I built a low-power weather display
+date: 2024-10-20
 ---
 Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a problem: I want to know how cold it is outside so I can dress appropriately.
 

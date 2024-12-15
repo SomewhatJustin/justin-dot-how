@@ -1,5 +1,6 @@
 ---
 title: A new midlife crisis every other week
+date: 2022-09-01
 ---
 
 I'm aged 26, yet I feel I've had multiple midlife crises.

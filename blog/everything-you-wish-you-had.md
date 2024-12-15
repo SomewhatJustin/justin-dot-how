@@ -1,5 +1,6 @@
 ---
 title: Is everything you wish you had be good enough?
+date: 2022-06-01
 ---
 
 *We're divers / That's why we're in our suits*

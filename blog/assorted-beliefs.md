@@ -1,5 +1,6 @@
 ---
 title: Assorted Beliefs
+date: 2024-11-01
 ---
 
 - American cities should prioritize making it easier for the market to respond to housing shortages. Cheap housing does more for disadvantaged families than most social programs.
