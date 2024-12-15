@@ -5,7 +5,7 @@ layout: layout.html
 <p>Here's a fun fact: this website is running on a Raspberry Pi!</p>
 <h2>My Writing</h2>
 <ul>
-  {% for post in collections.post %}
+  {%- for post in collections.post reversed -%}
   <li class=""><a href="{{ post.url}}">{{ post.data.title }}</li>
-  {% endfor %}  
+  {%- endfor -%}  
 </ul>
