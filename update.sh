@@ -9,8 +9,9 @@ echo "Starting update: $(date)" >> "$LOGFILE"
 # Kill any running eleventy
 pkill -f "npm run eleventy"
 
-# Pull the latest changes
-git pull origin main >> "$LOGFILE" 2>&1
+# Reset any local changes and force pull from remote
+git fetch origin main >> "$LOGFILE" 2>&1
+git reset --hard origin/main >> "$LOGFILE" 2>&1
 
 # Install dependencies
 /usr/bin/npm ci >> "$LOGFILE" 2>&1
