@@ -172,7 +172,7 @@ img {
 #blog-post-list li {
   border-radius: 5px;
   background: none;
-  border: 1px solid #eee
+  border: 1px solid #eee;
   margin: 10px 0px;
   padding: 4px;
 }
@@ -180,6 +180,13 @@ img {
 #blog-post-list li a {
   color: #333;
 }
+
+@media (prefers-color-scheme: dark) {
+  #blog-post-list li a {
+    color: #cecece;
+  }
+}
+
 
 .video-container {
   position: relative;
