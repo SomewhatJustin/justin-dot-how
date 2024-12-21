@@ -83,6 +83,14 @@ header {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  header {
+    padding: 0rem;
+  }
+
+  .nav-container {
+    padding: 0.5rem;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -111,10 +119,10 @@ main {
 
 @media (max-width: 768px) {
   main {
-    padding-top: 4rem; /* Adjust top padding to account for the fixed header */
-    padding: 0;
+      padding: 1rem 0.5rem 0;
   }
 }
+
 
 h1 {
   font-size: 2rem;
