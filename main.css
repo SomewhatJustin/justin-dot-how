@@ -172,7 +172,6 @@ img {
 }
 
 #blog-post-list {
-  list-style-type: none;
   padding-left: none;
   padding: 0px;
 }
@@ -185,7 +184,7 @@ img {
 }
 
 #blog-post-list li a {
-  color: #333;
+  color: #493548;
 }
 
 @media (prefers-color-scheme: dark) {
