@@ -1,5 +1,5 @@
 ---
-title: Linux turned my ROG Ally into a Steam Deck
+title: A Handheld Upgrade: How Bazzite Transformed My ROG Ally
 date: 2025-02-08
 ---
 ![ROG Ally in Steam](/assets/rog-steam.jpeg)

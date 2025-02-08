@@ -11,8 +11,11 @@
     {% include "header.html" %}
     <main>
       {% if title %}
-    <h1>{{ title }}</h1>
-    {% endif %}
+        <h1>{{ title }}</h1>
+        {% if date %}
+          <p id="date">{{ date | date: "%b %d, %Y" }}</p>
+        {% endif %}
+      {% endif %}
       {{ content }}</main>
       {% include "scripts.html" %}
     

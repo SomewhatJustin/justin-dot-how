@@ -128,8 +128,9 @@ main {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   color: rgba(var(--base-header-color), 1); /* Fully opaque */
+  font-weight: 400; /* Set font weight to 400 */
 }
 
 h2 {
@@ -137,11 +138,13 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
   color: rgba(var(--base-header-color), 0.9); /* Slightly transparent */
+  font-weight: 400; /* Set font weight to 400 */
 }
 
 h3, h4, h5 {
   margin-top: 1.75rem;
   margin-bottom: 1rem;
+  font-weight: 400; /* Set font weight to 400 */
 }
 
 h3 {
@@ -238,6 +241,7 @@ img {
   margin-top: 0;
   margin-bottom: 1rem;
   color: rgba(var(--base-header-color), 0.9);
+  font-weight: 400; /* Set font weight to 400 */
 }
 
 .stats-section p {
@@ -253,3 +257,7 @@ p {
   margin-bottom: 1.25rem;
 }
 
+#date {
+  font-size: 0.8rem;
+  color: rgba(var(--base-header-color), 0.5);
+}
