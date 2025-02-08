@@ -26,10 +26,11 @@ body {
   font-size: 1.15rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -38,6 +39,7 @@ header {
   width: 100%;
   background-color: var(--header-bg-color);
   padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Ensure the header is above other content */
 }
 
@@ -126,12 +128,20 @@ main {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: rgba(var(--base-header-color), 1); /* Fully opaque */
 }
 
 h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
   color: rgba(var(--base-header-color), 0.9); /* Slightly transparent */
+}
+
+h3, h4, h5 {
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -236,5 +246,10 @@ img {
 
 .photo-item {
   display: inline-block;
+}
+
+/* Added for better spacing between paragraphs */
+p {
+  margin-bottom: 1.25rem;
 }
 
