@@ -10,20 +10,20 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}Justin Fowler's Website{% endif %}" />
-    <meta property="og:description" content="{{ content | striptags | truncate(160) }}" />
+    <meta property="og:description" content="{{ content | strip_html | truncate: 160 }}" />
     {% if content contains '<img' %}
     {% assign images = content | split: '<img' %}
     {% assign firstImage = images[1] | split: 'src="' %}
     {% assign imageUrl = firstImage[1] | split: '"' | first %}
-    <meta property="og:image" content="{{ imageUrl | absolute_url }}" />
+    <meta property="og:image" content="https://justin.how{{ imageUrl }}" />
     {% endif %}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}Justin Fowler's Website{% endif %}" />
-    <meta name="twitter:description" content="{{ content | striptags | truncate(160) }}" />
+    <meta name="twitter:description" content="{{ content | strip_html | truncate: 160 }}" />
     {% if content contains '<img' %}
-    <meta name="twitter:image" content="{{ imageUrl | absolute_url }}" />
+    <meta name="twitter:image" content="https://justin.how{{ imageUrl }}" />
     {% endif %}
   </head>
   <body class="">
