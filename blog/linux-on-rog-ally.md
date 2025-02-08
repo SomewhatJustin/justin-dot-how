@@ -4,14 +4,13 @@ date: 2025-02-08
 ---
 ![ROG Ally in Steam](/assets/rog-steam.jpeg)
 
-I decided a few days before [FOSDEM](https://fosdem.org) that a handheld PC would be an excellent travel accessory and a way to re-enter PC gaming. But unfortunately, the Steam Deck is only available to purchase directly from Steam, and there was no gaurentee that it would arrive before I hopped on the plane.
+I decided a few days before [FOSDEM](https://fosdem.org) that a handheld PC would be an excellent travel accessory and a way to re-enter PC gaming. But unfortunately, the Steam Deck is only available to purchase directly from Steam, and there was no guarantee that it would arrive before I hopped on the plane.
 
 After taking a look on Best Buy, I found the Rog Ally with the Z1 Extreme for $449 USD, $200 off normal retail. Plus it was bunlded with a free travel case! I thanked my lucky stars, placed the order, and picked it up the same day. I am so spoiled.
 
-Purchasing the ROG, I knew I was going to install Linux on it. Linux has become a bit of [an obsession for me](/switching-to-linux). I never gave Windows a chance. I had to use Windows 10 for a class about a year ago and found myself *offended* by it. But that's another post.
+Purchasing the ROG, I knew I was going to install Linux on it. Linux has become a bit of [an obsession for me](/switching-to-linux). I never gave Windows a chance. I've been forced to use Windows 10 in the past and found myself *offended* by it. But that's another post.
 
 Thanks to some mentions on the excellent [Linux Unplugged](https://linuxunplugged.com/) podcast, which just celebrated its 600th episode, I knew that I would be installing Universal Blue's [Bazzite](https://bazzite.gg/). Bazzite is a gaming-focused Linux distribution that can be installed with Steam's gaming mode enabled by default. This means that when you launch the OS, it goes straight into the same UI that you would expect on a Steam Deck. Steam is open, showing all your games. You can exit to a "Desktop mode", which is by default powered by KDE Plasma, but as I intended to treat this as a dedicated gaming device, I knew I'd never see the desktop after initial setup.
-
 
 ## Installation
 
