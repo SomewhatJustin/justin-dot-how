@@ -9,6 +9,9 @@ module.exports = function (eleventyConfig) {
   // Passthrough copy for the photography folder
   eleventyConfig.addPassthroughCopy("photography");
 
+  // Passthrough copy for the assets folder
+  eleventyConfig.addPassthroughCopy("assets");
+
   // Add a custom collection to list photos in the 'photography' folder
   eleventyConfig.addCollection("photos", function() {
     const photoFolder = "./photography";
