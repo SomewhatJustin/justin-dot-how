@@ -1,5 +1,5 @@
 ---
-title: A Handheld Upgrade: How Bazzite Transformed My ROG Ally
+title: A Handheld Upgrade - How Bazzite Transformed My ROG Ally
 date: 2025-02-08
 ---
 ![ROG Ally in Steam](/assets/rog-steam.jpeg)
