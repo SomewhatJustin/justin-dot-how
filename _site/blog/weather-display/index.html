@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>I built a low-power weather display - Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="I built a low-power weather display" />
-    <meta property="og:description" content="Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a..." />
-    
-    
-    
-    
-    <meta property="og:image" content="https://justin.how/assets/weather-pi.jpeg" />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="I built a low-power weather display" />
-    <meta name="twitter:description" content="Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a..." />
-    
-    <meta name="twitter:image" content="https://justin.how/assets/weather-pi.jpeg" />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I built a low-power weather display - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <!-- Add syntax highlighting CSS if needed -->
+    <!-- <link rel="stylesheet" href="/path/to/prism.css"> -->
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-        <h1>I built a low-power weather display</h1>
-        
-          <p id="date">Oct 19, 2024</p>
-        
-      
-      <p>Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a problem: I want to know how cold it is outside so I can dress appropriately.</p>
+
+    <main class="content-wrapper post-content">
+        <article>
+            <header class="post-header">
+                <h1>I built a low-power weather display</h1>
+                
+                    <p class="post-meta">Published on <time datetime="yyyy-MM-dd">MMMM d, yyyy</time></p>
+                
+            </header>
+            <p>Living in Austin, most days are warm. Shorts weather. But from mid-November to mid-April, it can be a tossup of how much I need to bundle up. This presents a problem: I want to know how cold it is outside so I can dress appropriately.</p>
 <p>Now, this is a great use-case for a voice assistant. But I don't want to talk to Google in the morning! Just not a great way to start the day.</p>
 <p>So I built this:
 <img src="/assets/weather-pi.jpeg" alt="weather station"></p>
@@ -69,13 +55,24 @@
 </ul>
 <p><strong>Software</strong>
 All my code is open source and <a href="https://github.com/SomewhatJustin/weather-station">available on GitHub</a>. You'll want to check out the <a href="https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_Manual">waveshare manual</a>, which has a dedicated section for Raspberry Pi.</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+    <!-- Add syntax highlighting JS if needed -->
+    <!-- <script src="/path/to/prism.js"></script> -->
+</body>
+</html> 

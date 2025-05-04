@@ -13,6 +13,8 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "luxon": "^3.6.1",
     "prettier": "^3.3.3"
   },
   "dependencies": {

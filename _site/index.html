@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Justin Fowler's Website" />
-    <meta property="og:description" content="Welcome to my website!My name is Justin—I'm a Software Engineer at FUTO. Previously, I was a Product Manager at places like Indeed, Aceable, and Upswing.
-In ..." />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Justin Fowler's Website" />
-    <meta name="twitter:description" content="Welcome to my website!My name is Justin—I'm a Software Engineer at FUTO. Previously, I was a Product Manager at places like Indeed, Aceable, and Upswing.
-In ..." />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body class="homepage">
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-      <p class="italic">Welcome to my website!</p><p>My name is Justin—I'm a Software Engineer at <a href="https://futo.org">FUTO</a>. Previously, I was a Product Manager at places like <a href="https://indeed.com">Indeed</a>, <a href="https://aceable.com">Aceable</a>, and <a href="https://upswing.io">Upswing</a>.</p>
-<p>In my spare time I coach softball, do comedy, <a href="/photography">take photos</a>, and hike.</p>
-<h3>Writing</h3>
-<ul id="blog-post-list"><li class=""><a href="/blog/linux-on-rog-ally/">A Handheld Upgrade - How Bazzite Transformed My ROG Ally</a></li><li class=""><a href="/blog/college/">Why I went back to college</a></li><li class=""><a href="/blog/assorted-beliefs/">Assorted Beliefs</a></li><li class=""><a href="/blog/weather-display/">I built a low-power weather display</a></li><li class=""><a href="/blog/switching-to-linux/">My Linux Journey After 12 Years of macOS</a></li><li class=""><a href="/blog/mozilla-foundation/">My Application for the Mozilla Foundation</a></li><li class=""><a href="/blog/hiking-texas/">Hiking in Austin and Central Texas</a></li><li class=""><a href="/blog/new-midlife-crisis/">A new midlife crisis every other week</a></li><li class=""><a href="/blog/everything-you-wish-you-had/">Is everything you wish you had be good enough?</a></li></ul>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+    <main class="content-wrapper">
+        
+<section class="hero-section" aria-labelledby="hero-heading">
+    <h1 id="hero-heading">Hi, I'm Justin — a software engineer, builder, and curious mind based in Austin, TX.</h1>
+    <p class="hero-subheading">I build privacy-focused tools, explore systems thinking, and aim to do great work on the right problems.</p>
+</section>
+
+<section class="explore-section" aria-labelledby="explore-heading">
+    <h2 id="explore-heading">Explore</h2>
+    <div class="link-grid">
+        <a href="/blog" class="card">
+            <h3>Blog</h3>
+            <p>Thoughts on technology, systems, and design.</p>
+        </a>
+        <a href="/projects" class="card">
+            <h3>Projects</h3>
+            <p>Selected work and experiments.</p>
+        </a>
+        <a href="/photography" class="card">
+            <h3>Photography</h3>
+            <p>Moments captured through the lens.</p>
+        </a>
+        <a href="/about" class="card">
+            <h3>About</h3>
+            <p>Learn more about my background and interests.</p>
+        </a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+    <!-- Optional: Add JS for animations later if needed -->
+</body>
+</html> 

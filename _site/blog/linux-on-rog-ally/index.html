@@ -1,60 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>A Handheld Upgrade - How Bazzite Transformed My ROG Ally - Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="A Handheld Upgrade - How Bazzite Transformed My ROG Ally" />
-    <meta property="og:description" content="
-I decided a few days before FOSDEM that a handheld PC would be an excellent travel accessory and a way to re-enter PC gaming. But unfortunately, the Steam D..." />
-    
-    
-    
-    
-    <meta property="og:image" content="https://justin.how/assets/rog-steam.jpeg" />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="A Handheld Upgrade - How Bazzite Transformed My ROG Ally" />
-    <meta name="twitter:description" content="
-I decided a few days before FOSDEM that a handheld PC would be an excellent travel accessory and a way to re-enter PC gaming. But unfortunately, the Steam D..." />
-    
-    <meta name="twitter:image" content="https://justin.how/assets/rog-steam.jpeg" />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Handheld Upgrade - How Bazzite Transformed My ROG Ally - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <!-- Add syntax highlighting CSS if needed -->
+    <!-- <link rel="stylesheet" href="/path/to/prism.css"> -->
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-        <h1>A Handheld Upgrade - How Bazzite Transformed My ROG Ally</h1>
-        
-          <p id="date">Feb 07, 2025</p>
-        
-      
-      <p><img src="/assets/rog-steam.jpeg" alt="ROG Ally in Steam"></p>
+
+    <main class="content-wrapper post-content">
+        <article>
+            <header class="post-header">
+                <h1>A Handheld Upgrade - How Bazzite Transformed My ROG Ally</h1>
+                
+                    <p class="post-meta">Published on <time datetime="yyyy-MM-dd">MMMM d, yyyy</time></p>
+                
+            </header>
+            <p><img src="/assets/rog-steam.jpeg" alt="ROG Ally in Steam"></p>
 <p>I decided a few days before <a href="https://fosdem.org">FOSDEM</a> that a handheld PC would be an excellent travel accessory and a way to re-enter PC gaming. But unfortunately, the Steam Deck is only available to purchase directly from Steam, and there was no guarantee that it would arrive before I hopped on the plane.</p>
 <p>After taking a look on Best Buy, I found the Rog Ally with the Z1 Extreme for $449 USD, $200 off normal retail. Plus it was bundled with a free travel case! I thanked my lucky stars, placed the order, and picked it up the same day. I am so spoiled.</p>
 <p>Purchasing the ROG, I knew I was going to install Linux on it. Linux has become a bit of <a href="/blog/switching-to-linux">an obsession for me</a>. I never gave Windows a chance. I've been forced to use Windows 10 in the past and found myself <em>offended</em> by it. But that's another post.</p>
@@ -88,13 +72,24 @@ I decided a few days before FOSDEM that a handheld PC would be an excellent trav
 <h2>Final Thoughts</h2>
 <p>If you are comfortable installing Linux on a computer, then yes, I would recommend trying this approach. With an official public release of <a href="https://www.forbes.com/sites/jasonevangelho/2025/01/07/valve-set-to-release-a-steamos-beta-for-multiple-devices/">SteamOS on the horizon</a>, the picture for Linux on handhelds is only getting rosier. I've found that this device has revitalized my interest in PC gaming, and even gaming in general. It got me to finally finish Portal 2 and Inside — games that I had loved but abandoned years ago.</p>
 <p>If you have any questions, please feel free to reach out.</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+    <!-- Add syntax highlighting JS if needed -->
+    <!-- <script src="/path/to/prism.js"></script> -->
+</body>
+</html> 

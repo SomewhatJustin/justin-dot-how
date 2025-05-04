@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Justin Fowler's Website" />
-    <meta property="og:description" content="
-About me
-
-  I am a software engineer at FUTO, where I'm building the future of open source software distribution. I love tinkering with my computer, reading..." />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Justin Fowler's Website" />
-    <meta name="twitter:description" content="
-About me
-
-  I am a software engineer at FUTO, where I'm building the future of open source software distribution. I love tinkering with my computer, reading..." />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-      
-<h2>About me</h2>
-<p>
-  I am a software engineer at <a href="https://futo.org">FUTO</a>, where I'm building the future of open source software distribution. I love tinkering with my computer, reading, and coaching softball.
-</p>
+
+    <main class="content-wrapper page-content">
+        <h1>About</h1>
+        <p>My name is Justin—I'm a Software Engineer at <a href="https://futo.org">FUTO</a>. Previously, I was a Product Manager at places like <a href="https://indeed.com">Indeed</a>, <a href="https://aceable.com">Aceable</a>, and <a href="https://upswing.io">Upswing</a>.</p>
+<p>In my spare time I coach softball, do comedy, <a href="/photography">take photos</a>, and hike.</p>
 
 <p>You can find me on <a href="https://github.com/somewhatjustin">GitHub</a>, <a href="https://mastodon.social/@justinfowler">Mastodon</a>, and <a href="https://x.com/somewhatjustin">X</a>.</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+</body>
+</html> 

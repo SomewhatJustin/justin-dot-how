@@ -1,101 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Justin Fowler's Website" />
-    <meta property="og:description" content="
-Personal
-UT Austin Course Semantic Search
-
-  I used Pinecone to build a
-  semantic search engine for UT
-  Austin&#39;s entire catalog of courses.
-
-UT Austin..." />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Justin Fowler's Website" />
-    <meta name="twitter:description" content="
-Personal
-UT Austin Course Semantic Search
-
-  I used Pinecone to build a
-  semantic search engine for UT
-  Austin&#39;s entire catalog of courses.
-
-UT Austin..." />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-      
-<h1 id="personal">Personal</h1>
-<h2 id="ut-austin-course-semantic-search">UT Austin Course Semantic Search</h2>
-<p>
-  I used <a href="https://www.pinecone.io/">Pinecone</a> to build a
-  <a href="https://github.com/SomewhatJustin/ut-course-search">semantic search engine</a> for UT
-  Austin&#39;s entire catalog of courses.
-</p>
-<h2 id="ut-austin-course-web-scraper">UT Austin Course Web Scraper</h2>
-<p>
-  I built a <a href="https://github.com/SomewhatJustin/UT-Austin-Course-Scraper">web scraper</a> to
-  gather every course that UT Austin offers (over 10,000!)
-</p>
-<h2 id="ask-a-stoic">Ask a Stoic</h2>
-<p>
-  Using the Chat GPT API and React, I built <a href="https://stoic.justin.how">Ask a Stoic</a>, a
-  way to chat with ancient philosophers
-</p>
-<h1 id="professional">Professional</h1>
-<p>While working at BigLift, I worked with <a href="https://www.linkedin.com/in/josephocchionero/">Joe Occhionero</a> to create a platform for restaurants to order directly from vendors. I made a quick overview:</p>
-<!-- Wrap the iframe in a responsive container -->
-<div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7ARnEKlHlis?si=6YEW5bU4vZJYad9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <main class="content-wrapper page-content">
+        <h1>Projects</h1>
+        
+<div class="project-list">
+
+  <div class="project-item">
+    <h3><a href="https://futocore.futo.org/" target="_blank" rel="noopener noreferrer">FUTOcore Software Store</a></h3>
+    <p>Building an alternative Android app store based on open-source principles. My focus areas include the store's mobile application (React Native) and the underlying Payment library (Kotlin).</p>
+    <p><a href="https://futocore.futo.org/" target="_blank" rel="noopener noreferrer">Learn more about FUTOcore &rarr;</a></p>
+  </div>
+
+  <div class="project-item">
+    <h3><a href="https://www.youtube.com/watch?v=7ARnEKlHlis" target="_blank" rel="noopener noreferrer">GreenLight Grocery (Video Demo)</a></h3>
+    <p>Think DoorDash, but for B2B: A platform enabling restaurants to efficiently order inventory directly from suppliers. As an engineer on the project, I worked with React, AWS Lambdas, Serverless framework, and Tailwind CSS.</p>
+     <p><a href="https://www.youtube.com/watch?v=7ARnEKlHlis" target="_blank" rel="noopener noreferrer">Watch the demo video &rarr;</a></p>
+  </div>
+
+  <div class="project-item">
+    <h3>One-way Video Interviews at Indeed</h3>
+    <p>As a Product Manager within Indeed's Incubator, I helped research, define, and bring to life the platform's first feature for one-way (asynchronous) video interviews, focusing on the job seeker experience.</p>
+    <!-- Optional: Add a link if there's a relevant public page/article -->
+  </div>
+
 </div>
-<p>
-  While at <a href="https://www.indeed.com/">Indeed</a>, I helped build the future of asynchronous
-  video interviews inside Indeed&#39;s Incubator, owning the job seeker experience as a Product
-  Manager
-</p>
-<p>
-  While at <a href="https://upswing.io">Upswing</a>, I created Ana, a chatbot for students. This
-  project would go on to become the recipient of a Gates Foundation grant.
-</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+</body>
+</html> 

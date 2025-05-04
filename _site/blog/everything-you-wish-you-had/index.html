@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>Is everything you wish you had be good enough? - Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Is everything you wish you had be good enough?" />
-    <meta property="og:description" content="We're divers / That's why we're in our suits
-In Deep Sea Divers, a track off Darwin Deez's underappreciated self-titled pop masterpiece, Darwin asks his part..." />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Is everything you wish you had be good enough?" />
-    <meta name="twitter:description" content="We're divers / That's why we're in our suits
-In Deep Sea Divers, a track off Darwin Deez's underappreciated self-titled pop masterpiece, Darwin asks his part..." />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is everything you wish you had be good enough? - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <!-- Add syntax highlighting CSS if needed -->
+    <!-- <link rel="stylesheet" href="/path/to/prism.css"> -->
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-        <h1>Is everything you wish you had be good enough?</h1>
-        
-          <p id="date">May 31, 2022</p>
-        
-      
-      <p><em>We're divers / That's why we're in our suits</em></p>
+
+    <main class="content-wrapper post-content">
+        <article>
+            <header class="post-header">
+                <h1>Is everything you wish you had be good enough?</h1>
+                
+                    <p class="post-meta">Published on <time datetime="yyyy-MM-dd">MMMM d, yyyy</time></p>
+                
+            </header>
+            <p><em>We're divers / That's why we're in our suits</em></p>
 <p>In Deep Sea Divers, a track off Darwin Deez's underappreciated self-titled pop masterpiece, Darwin asks his partner &quot;Would everything you wish you had be good enough?&quot;, and I took that personally.</p>
 <p>Consumer culture is mostly about closing the gap between one's desires and their fulfillment. Remember when Amazon's free two-day shipping was revolutionary? Now we count delivery times by the hour. DoorDash is happy to give you as many calories as you can afford in a matter of minutes. All the information you could possibly want is just milliseconds away thanks to always-present 5G.</p>
 <p>There's no end in sight to these trends, so where is their natural conclusion? The point at which all of your wishes can be fulfilled instantly. As virtual worlds subsume our physical &quot;meat-space&quot; reality, this endgame doesn't seem too far off.</p>
@@ -58,13 +49,24 @@ In Deep Sea Divers, a track off Darwin Deez's underappreciated self-titled pop m
 <p>In the overworld, some will trade their friends and family to play professional sports, hold positions of power, accumulate wealth, invent new technology, and more.</p>
 <p>Most others see value in close relationships.</p>
 <p>It's possible I'm not giving humanity enough credit. Wouldn't it be more fun to live out your rock star fantasy in a world where your IRL friends get to play alongside you?</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+    <!-- Add syntax highlighting JS if needed -->
+    <!-- <script src="/path/to/prism.js"></script> -->
+</body>
+</html> 

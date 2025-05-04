@@ -1,11 +1,31 @@
 ---
-layout: layout.html
+layout: homepage-layout.html
+title: Home
 ---
-<p class="italic">Welcome to my website!</p><p>My name is Justin—I'm a Software Engineer at <a href="https://futo.org">FUTO</a>. Previously, I was a Product Manager at places like <a href="https://indeed.com">Indeed</a>, <a href="https://aceable.com">Aceable</a>, and <a href="https://upswing.io">Upswing</a>.</p>
-<p>In my spare time I coach softball, do comedy, <a href="/photography">take photos</a>, and hike.</p>
-<h3>Writing</h3>
-<ul id="blog-post-list">
-  {%- for post in collections.post reversed-%}
-  <li class=""><a href="{{ post.url}}">{{ post.data.title }}</a></li>
-  {%- endfor -%}  
-</ul>
+
+<section class="hero-section" aria-labelledby="hero-heading">
+    <h1 id="hero-heading">Hi, I'm Justin — a software engineer, builder, and curious mind based in Austin, TX.</h1>
+    <p class="hero-subheading">I build privacy-focused tools, explore systems thinking, and aim to do great work on the right problems.</p>
+</section>
+
+<section class="explore-section" aria-labelledby="explore-heading">
+    <h2 id="explore-heading">Explore</h2>
+    <div class="link-grid">
+        <a href="/blog" class="card">
+            <h3>Blog</h3>
+            <p>Thoughts on technology, systems, and design.</p>
+        </a>
+        <a href="/projects" class="card">
+            <h3>Projects</h3>
+            <p>Selected work and experiments.</p>
+        </a>
+        <a href="/photography" class="card">
+            <h3>Photography</h3>
+            <p>Moments captured through the lens.</p>
+        </a>
+        <a href="/about" class="card">
+            <h3>About</h3>
+            <p>Learn more about my background and interests.</p>
+        </a>
+    </div>
+</section>

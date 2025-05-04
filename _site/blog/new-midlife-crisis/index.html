@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/main.css" />
-    <title>A new midlife crisis every other week - Justin Fowler's Website</title>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="A new midlife crisis every other week" />
-    <meta property="og:description" content="I'm aged 26, yet I feel I've had multiple midlife crises.
-There’s an allure to new beginnings. We praise people who look around, realize they’re on the wrong..." />
-    
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="A new midlife crisis every other week" />
-    <meta name="twitter:description" content="I'm aged 26, yet I feel I've had multiple midlife crises.
-There’s an allure to new beginnings. We praise people who look around, realize they’re on the wrong..." />
-    
-  </head>
-  <body class="">
-    <header>
-    <nav>
-      <div class="nav-container">
-        <span class="nav-brand">
-          <a id="my-name" href="/">Justin Fowler</a>
-        </span>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-        <div class="nav-links">
-          <span><a href="/about">About</a></span>
-          <span><a href="/projects">Projects</a></span>
-          <span><a href="/photography">Photography</a></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A new midlife crisis every other week - Justin Fowler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <!-- Add syntax highlighting CSS if needed -->
+    <!-- <link rel="stylesheet" href="/path/to/prism.css"> -->
+</head>
+<body>
+    <header class="site-header sticky">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="/">Justin Fowler</a>
         </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/photography">Photography</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+    </div>
+</header>
   
-    <main>
-      
-        <h1>A new midlife crisis every other week</h1>
-        
-          <p id="date">Aug 31, 2022</p>
-        
-      
-      <p>I'm aged 26, yet I feel I've had multiple midlife crises.</p>
+
+    <main class="content-wrapper post-content">
+        <article>
+            <header class="post-header">
+                <h1>A new midlife crisis every other week</h1>
+                
+                    <p class="post-meta">Published on <time datetime="yyyy-MM-dd">MMMM d, yyyy</time></p>
+                
+            </header>
+            <p>I'm aged 26, yet I feel I've had multiple midlife crises.</p>
 <p>There’s an allure to new beginnings. We praise people who look around, realize they’re on the wrong path, and do something drastic. When we read about them in books, it always works out for them.</p>
 <p>But some of life’s most precious rewards come from after periods of persistence. In Cal Newport's <em>So Good They Can't Ignore You</em>, he makes the argument that the most interesting jobs come to those who are the best at what they do. And the only way to get there is to practice your craft consistently.</p>
 <p>This is true in relationships as well. I'd rather have one old friend than three new friends. <a href="https://open.spotify.com/track/4ykQ18swXrkrrbwsZKxQo7?si=17da8670ed5641e2">Pinegrove would agree</a>. The closeness and ease of being that comes from long-term relationships outclasses anything new, no matter how fiery or passionate. When you consider taking on a new friend, it's worth asking if this person is someone you'd want to keep in your life for 10 years. If not, why keep them in your life for 10 days?</p>
@@ -70,13 +61,24 @@ The psychologists Shane Frederick and George Lowenstein have studied this phenom
 <p>It’s a matter of my choosing to do the work of somehow altering or getting free of my natural, hard-wired default setting which is to be deeply and literally self-centered and to see and interpret everything through this lens of self.</p>
 </blockquote>
 <p>We default to living in a way that focuses entirely on what we're getting out of life. Of pursuing pleasure, avoiding pain, reaching for money, success, and fame. And when we become dissatisfied, doubling down or trying a radically new approach, thinking that when we figure it out <em>this time</em>, we'll arrive at that promised land.</p>
-</main>
-      <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
-  
-    
-  </body>
-</html>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-copyright">
+            &copy; 2025 Justin Fowler
+        </div>
+        <div class="footer-links">
+            <a href="mailto:justinfowler1996@gmail.com" aria-label="Email Justin">Email</a>
+            <a href="https://github.com/SomewhatJustin" target="_blank" rel="noopener noreferrer" aria-label="Justin's GitHub">GitHub</a>
+            <!-- Add LinkedIn link here if desired -->
+        </div>
+    </div>
+</footer> 
+
+    <!-- Add syntax highlighting JS if needed -->
+    <!-- <script src="/path/to/prism.js"></script> -->
+</body>
+</html> 
