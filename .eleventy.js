@@ -6,8 +6,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("main.css");
   eleventyConfig.addPassthroughCopy("drinks.css");
 
-  // Passthrough copy for the photography folder
-  eleventyConfig.addPassthroughCopy("photography");
+  // Passthrough copy for the photography folder - REMOVED
+  // eleventyConfig.addPassthroughCopy("photography"); 
+
+  // Passthrough copy image files from the photography folder
+  eleventyConfig.addPassthroughCopy("photography/**/*.{jpg,jpeg,png,gif,webp}");
 
   // Passthrough copy for the assets folder
   eleventyConfig.addPassthroughCopy("assets");

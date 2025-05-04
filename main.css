@@ -250,6 +250,21 @@ img {
 
 .photo-item {
   display: inline-block;
+  max-height: 85vh; /* Limit max height */
+  width: auto; /* Allow image to shrink if needed based on height */
+  max-width: 100%; /* Ensure image does not exceed container width by default */
+  vertical-align: middle; /* Align images nicely if they wrap */
+  margin-bottom: 10rem;
+}
+
+/* Center photos and limit width on larger screens */
+@media (min-width: 769px) {
+  .photo-item {
+    display: block; /* Override inline-block for centering */
+    max-width: 90%; /* Limit max width */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Added for better spacing between paragraphs */
