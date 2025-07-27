@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 /* === Reset & Base Styles === */
 *,
@@ -14,7 +14,7 @@
   --bg-color: #fdfdfd; /* Off-white */
   --text-color: #1a1a1a; /* Soft black */
   --heading-color: #101010;
-  --link-color: #334155; /* Deep slate */
+  --link-color: #00f;
   --link-hover-color: #0f172a; /* Darker slate */
   --accent-color-subtle: #e2e8f0; /* Very light gray/slate for borders/bg */
   --card-bg: #ffffff;
@@ -25,12 +25,14 @@
   --bg-color-dark: #111111; /* Slightly softer than pure black */
   --text-color-dark: #e5e5e5; /* Light gray */
   --heading-color-dark: #f5f5f5;
-  --link-color-dark: #94a3b8; /* Lighter slate */
+  --link-color-dark: #00f;
   --link-hover-color-dark: #cbd5e1; /* Even lighter slate */
   --accent-color-subtle-dark: #1f1f1f; /* Dark gray for borders/bg */
   --card-bg-dark: #1a1a1a;
-  --card-shadow-dark: 0 4px 6px -1px rgba(255, 255, 255, 0.03), 0 2px 4px -2px rgba(255, 255, 255, 0.03);
-  --card-hover-shadow-dark: 0 10px 15px -3px rgba(255, 255, 255, 0.05), 0 4px 6px -4px rgba(255, 255, 255, 0.05);
+  --card-shadow-dark:
+    0 4px 6px -1px rgba(255, 255, 255, 0.03), 0 2px 4px -2px rgba(255, 255, 255, 0.03);
+  --card-hover-shadow-dark:
+    0 10px 15px -3px rgba(255, 255, 255, 0.05), 0 4px 6px -4px rgba(255, 255, 255, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,13 +50,26 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-size: 1.1rem;
   line-height: 1.7;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding-top: 80px; /* Space for sticky header */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -65,8 +80,10 @@ body {
   padding: 4rem 1.5rem; /* Generous vertical spacing */
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   color: var(--heading-color);
   line-height: 1.3;
@@ -126,10 +143,14 @@ img {
 
 /* Add RGB versions for transparency */
 @media (prefers-color-scheme: light) {
-  :root { --bg-color-rgb: 253, 253, 253; }
+  :root {
+    --bg-color-rgb: 253, 253, 253;
+  }
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg-color-rgb: 17, 17, 17; }
+  :root {
+    --bg-color-rgb: 17, 17, 17;
+  }
 }
 
 .nav-container {
@@ -255,7 +276,9 @@ img {
   text-decoration: none;
   color: var(--text-color);
   box-shadow: var(--card-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -357,15 +380,25 @@ img {
     padding: 2rem 1rem;
   }
 
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.6rem; }
-  .hero-section { padding: 2rem 0; }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .hero-section {
+    padding: 2rem 0;
+  }
 }
 
 /* === Animations (Subtle Fade-in) === */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {
@@ -387,7 +420,11 @@ body {
 
 /* === Remove Old/Conflicting Styles === */
 /* (Selectively remove styles from the old main.css that might interfere) */
-#my-name, #blog-post-list, .stats-container, .stats-section, .photo-item {
+#my-name,
+#blog-post-list,
+.stats-container,
+.stats-section,
+.photo-item {
   /* Reset or remove styles if they were very specific and might clash */
   /* Example: */
   /* background: none; */
@@ -401,8 +438,8 @@ body {
   /* Re-apply some safe defaults or adjust as needed */
   display: block; /* Changed from inline-block for better centering/layout */
   margin: 2rem auto; /* Add some vertical space between photos */
-  max-height: 85vh; 
-  width: auto; 
+  max-height: 85vh;
+  width: auto;
   max-width: 100%;
   vertical-align: middle;
 }
@@ -465,7 +502,7 @@ body {
 }
 
 .project-item h3 {
-  font-family: 'Inter', sans-serif; /* Use sans-serif for project titles */
+  font-family: "Inter", sans-serif; /* Use sans-serif for project titles */
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -508,7 +545,7 @@ body {
 .post-content article h2, /* Target headings within the post */
 .post-content article h3,
 .post-content article h4 {
-  font-family: 'Inter', sans-serif; /* Use sans-serif for subheadings in posts */
+  font-family: "Inter", sans-serif; /* Use sans-serif for subheadings in posts */
   font-weight: 500;
   color: var(--heading-color);
   margin-top: 2.5rem;
@@ -560,7 +597,7 @@ body {
 }
 
 .post-content article code {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   background-color: var(--accent-color-subtle);
   padding: 0.2em 0.4em;
   border-radius: 3px;

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run eleventy",
+    "dev": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy"
   },
   "keywords": [],
