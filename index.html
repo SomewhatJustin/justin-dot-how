@@ -4,28 +4,93 @@ title: Home
 ---
 
 <section class="hero-section" aria-labelledby="hero-heading">
-    <h1 id="hero-heading">Hi, I'm Justin — a software engineer, builder, and curious mind based in Austin, TX.</h1>
-    <p class="hero-subheading">I build privacy-focused tools, explore systems thinking, and aim to do great work on the right problems.</p>
+  <div class="hero-backdrop" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Engineer · Builder · Photographer</p>
+    <h1 id="hero-heading" class="hero-title gradient-text">Hi, I'm Justin.</h1>
+    <p class="hero-subheading">Software engineer based in Austin, TX.</p>
+    <div class="hero-cta">
+      <a href="/blog" class="button primary">Read the blog</a>
+      <a href="/projects" class="button">See projects</a>
+    </div>
+
+    <div class="marquee" aria-label="Topics I write about and build with">
+      <div class="marquee-track">
+        <span class="pill">Systems</span>
+        <span class="pill">Privacy</span>
+        <span class="pill">Linux</span>
+        <span class="pill">AMD</span>
+        <span class="pill">Edge ML</span>
+        <span class="pill">Open Source</span>
+        <span class="pill">Automation</span>
+        <span class="pill">Design</span>
+        <span class="pill">Photography</span>
+        <span class="pill">Web</span>
+        <!-- duplicate for seamless loop -->
+        <span class="pill">Systems</span>
+        <span class="pill">Privacy</span>
+        <span class="pill">Linux</span>
+        <span class="pill">AMD</span>
+        <span class="pill">Edge ML</span>
+        <span class="pill">Open Source</span>
+        <span class="pill">Automation</span>
+        <span class="pill">Design</span>
+        <span class="pill">Photography</span>
+        <span class="pill">Web</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section" aria-labelledby="featured-heading">
+  <h2 id="featured-heading">Featured</h2>
+  <div class="featured-grid">
+    <a class="featured-card" href="/blog/linux-on-rog-ally/" data-accent="violet">
+      <h3>Linux on ROG Ally</h3>
+      <p>From handheld to hacker‑friendly: a practical setup and lessons learned.</p>
+    </a>
+    <a class="featured-card" href="/blog/machine-learning-on-amd/" data-accent="teal">
+      <h3>Machine Learning on AMD</h3>
+      <p>Training and inference without NVIDIA—tooling that actually works.</p>
+    </a>
+    <a class="featured-card" href="/blog/weather-display/" data-accent="amber">
+      <h3>Weather Display</h3>
+      <p>Designing a delightful, glanceable weather screen for the home.</p>
+    </a>
+  </div>
 </section>
 
 <section class="explore-section" aria-labelledby="explore-heading">
-    <h2 id="explore-heading">Explore</h2>
-    <div class="link-grid">
-        <a href="/blog" class="card">
-            <h3>Blog</h3>
-            <p>Thoughts on technology, systems, and design.</p>
-        </a>
-        <a href="/projects" class="card">
-            <h3>Projects</h3>
-            <p>Selected work and experiments.</p>
-        </a>
-        <a href="/photography" class="card">
-            <h3>Photography</h3>
-            <p>Moments captured through the lens.</p>
-        </a>
-        <a href="/about" class="card">
-            <h3>About</h3>
-            <p>Learn more about my background and interests.</p>
-        </a>
-    </div>
+  <h2 id="explore-heading">Explore</h2>
+  <div class="link-grid colorful">
+    <a href="/blog" class="card" data-accent="blue">
+      <h3>📝 Blog</h3>
+      <p>Thoughts on technology, systems, and design.</p>
+    </a>
+    <a href="/projects" class="card" data-accent="green">
+      <h3>🧪 Projects</h3>
+      <p>Selected work and experiments.</p>
+    </a>
+    <a href="/photography" class="card" data-accent="pink">
+      <h3>📷 Photography</h3>
+      <p>Moments captured through the lens.</p>
+    </a>
+    <a href="/about" class="card" data-accent="orange">
+      <h3>👋 About</h3>
+      <p>Learn more about my background and interests.</p>
+    </a>
+  </div>
 </section>
+
+<section class="filmstrip-section" aria-labelledby="filmstrip-heading">
+  <h2 id="filmstrip-heading">Recent frames</h2>
+  <div class="photo-filmstrip">
+    {% for photo in photography.filmstrip %}
+      <a href="{{ photo }}" class="filmstrip-item" target="_blank" rel="noopener noreferrer">
+        <img src="{{ photo }}" alt="Recent photograph {{ forloop.index }}" loading="lazy" />
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+

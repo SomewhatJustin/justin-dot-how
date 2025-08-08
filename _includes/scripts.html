@@ -1,6 +1,36 @@
 <script>
-    document.querySelector(".nav-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
+  // Mobile nav toggle
+  (function(){
+    var toggle = document.querySelector(".nav-toggle");
+    var links = document.querySelector(".nav-links");
+    if (toggle && links) {
+      toggle.addEventListener("click", function () {
+        links.classList.toggle("active");
+      });
+    }
+  })();
+
+  // Subtle scroll-linked parallax for hero backdrop
+  (function(){
+    var backdrop = document.querySelector('.hero-backdrop');
+    if (!backdrop) return;
+
+    var lastY = window.scrollY;
+    var ticking = false;
+
+    function onScroll() {
+      lastY = window.scrollY || window.pageYOffset;
+      if (!ticking) {
+        window.requestAnimationFrame(function(){
+          var translate = Math.min(lastY * 0.12, 120); // cap movement
+          backdrop.style.transform = 'translateY(' + translate + 'px)';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
   

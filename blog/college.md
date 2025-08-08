@@ -1,6 +1,8 @@
 ---
 title: Why I went back to college
 date: 2024-12-15
+eleventyExcludeFromCollections: true
+permalink: false
 ---
 **Update - December 2024**
 
