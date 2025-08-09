@@ -3,8 +3,6 @@ layout: photos-layout.html
 title: Photography
 ---
 
-    {% for photo in collections.photos %}
-        <img src="/{{ photo.path | url }}" class="photo-item" loading="lazy" alt="{{ photo.name }}">
-    {% endfor %}
-  
-  
+{% for photo in collections.photos %}
+  {% responsiveImage photo.path, photo.name %}
+{% endfor %}
