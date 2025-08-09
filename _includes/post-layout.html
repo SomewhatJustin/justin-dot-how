@@ -18,6 +18,7 @@
         <article>
             <header class="post-header">
                 <h1>{{ title }}</h1>
+                <div class="title-accent" aria-hidden="true"></div>
                 {% if date %}
                     <p class="post-meta">Published on <time datetime="{{ date | date: 'yyyy-MM-dd' }}">{{ date | date: "MMMM d, yyyy" }}</time></p>
                 {% endif %}
