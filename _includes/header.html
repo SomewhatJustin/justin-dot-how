@@ -5,10 +5,10 @@
         </div>
         <nav class="nav-links" aria-label="Main navigation">
             {% assign current = page.url | default: '/' %}
-            <a href="/about" data-accent="orange" class="{% if current startswith '/about' %}active{% endif %}">About</a>
-            <a href="/blog" data-accent="blue" class="{% if current startswith '/blog' %}active{% endif %}">Blog</a>
-            <a href="/projects" data-accent="green" class="{% if current startswith '/projects' %}active{% endif %}">Projects</a>
-            <a href="/photography" data-accent="pink" class="{% if current startswith '/photography' %}active{% endif %}">Photography</a>
+            <a href="/about" class="{% if current startswith '/about' %}active{% endif %}">About</a>
+            <a href="/blog" class="{% if current startswith '/blog' %}active{% endif %}">Blog</a>
+            <a href="/projects" class="{% if current startswith '/projects' %}active{% endif %}">Projects</a>
+            <a href="/photography" class="{% if current startswith '/photography' %}active{% endif %}">Photography</a>
         </nav>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             &#9776; <!-- Hamburger icon -->
