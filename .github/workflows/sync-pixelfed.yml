@@ -1,0 +1,41 @@
+name: Sync Pixelfed
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync Pixelfed media
+        run: node scripts/fetch-pixelfed.js
+        env:
+          PIXELFED_TOKEN: ${{ secrets.PIXELFED_TOKEN }}
+          PIXELFED_INSTANCE: ${{ secrets.PIXELFED_INSTANCE }}
+
+      - name: Commit changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add photography _data/pixelfed.json
+            git commit -m 'sync pixelfed photos'
+            git push
+          else
+            echo 'No changes to commit.'
+          fi
