@@ -30,14 +30,23 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add a custom collection to list photos in the 'photography' folder
-  eleventyConfig.addCollection("photos", function() {
+  eleventyConfig.addCollection("photos", function () {
     const photoFolder = "./photography";
-    return fs.readdirSync(photoFolder)
-    .filter(fileName => !fileName.endsWith('index.html'))
-    .map(fileName => ({
-      name: fileName,
-      path: path.join(photoFolder, fileName)
-    }));
+    const photoEntries = fs
+      .readdirSync(photoFolder)
+      .filter((fileName) => !fileName.endsWith("index.html"))
+      .map((fileName) => {
+        const sourcePath = path.join(photoFolder, fileName);
+        const stats = fs.statSync(sourcePath);
+        return {
+          name: fileName,
+          path: path.posix.join("photography", fileName),
+          modifiedAt: stats.mtimeMs
+        };
+      })
+      .sort((a, b) => b.modifiedAt - a.modifiedAt);
+
+    return photoEntries.map(({ name, path }) => ({ name, path }));
   });
 
   // Set template formats
