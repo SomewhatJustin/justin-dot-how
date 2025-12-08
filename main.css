@@ -262,15 +262,6 @@ body.homepage .nav-brand a {
   opacity: 0.6;
 }
 
-.nav-toggle {
-  display: none; /* Hide hamburger by default */
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
 /* === Removed hero styles (old homepage) === */
 
 .button {
@@ -365,30 +356,13 @@ body.homepage .nav-brand a {
     padding: 0 1rem; /* Match content padding for perfect left alignment */
   }
 
-  .nav-toggle {
-    display: block; /* Show hamburger */
-  }
-
   .nav-links {
-    display: none; /* Hide links by default */
-    position: absolute;
-    top: 60px; /* Position below header */
-    left: 0;
-    right: 0;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    padding: 1rem;
-    border-bottom: 1px solid var(--accent-color-subtle);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-links.active {
-    display: flex; /* Show when toggled */
+    display: flex; /* Always show navigation */
+    gap: 1rem; /* Smaller gap on mobile */
   }
 
   .nav-links a {
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* Smaller font on mobile */
   }
 
   .content-wrapper {
