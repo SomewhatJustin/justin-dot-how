@@ -16,6 +16,9 @@ module.exports = function (eleventyConfig) {
   // Passthrough copy for the assets folder
   eleventyConfig.addPassthroughCopy("assets");
 
+  // Passthrough copy for robots.txt
+  eleventyConfig.addPassthroughCopy("robots.txt");
+
   // Define the 'post' collection explicitly, excluding the index file
   eleventyConfig.addCollection("post", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./blog/**/*.md")
@@ -61,5 +64,10 @@ module.exports = function (eleventyConfig) {
   // Date formatting filter
   eleventyConfig.addFilter("date", (dateObj, dateFormat) => {
     return format(dateObj, dateFormat);
+  });
+
+  // ISO date filter for sitemap
+  eleventyConfig.addFilter("isoDate", (dateObj) => {
+    return dateObj.toISOString().split('T')[0];
   });
 };
