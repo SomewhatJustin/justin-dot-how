@@ -1,0 +1,6 @@
+# Example Caddyfile for HTTPS reverse proxy
+# Uncomment and modify for your domain
+
+# justin.how {
+#     reverse_proxy web:3000
+# }

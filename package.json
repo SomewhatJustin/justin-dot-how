@@ -1,20 +1,52 @@
 {
   "name": "justin-dot-how",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @11ty/eleventy --serve",
-    "eleventy": "npx @11ty/eleventy"
+    "dev": "next dev",
+    "build": "npm run db:migrate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/lib/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "migrate-content": "tsx scripts/migrate-content.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+  "dependencies": {
+    "@lucia-auth/adapter-drizzle": "^1.1.0",
+    "@node-rs/argon2": "^2.0.2",
+    "@tiptap/extension-link": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/react": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "better-sqlite3": "^11.8.1",
     "date-fns": "^4.1.0",
-    "luxon": "^3.6.1",
-    "prettier": "^3.3.3"
+    "drizzle-orm": "^0.38.4",
+    "gray-matter": "^4.0.3",
+    "lucia": "^3.2.2",
+    "nanoid": "^5.0.9",
+    "next": "16.1.5",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "sharp": "^0.33.5",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.30.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.5",
+    "tailwindcss": "^4",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
   }
 }
