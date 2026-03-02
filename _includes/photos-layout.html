@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,7 @@
   </head>
   <body>
     {% include "header.html" %}
-    <main style="width: 98%; max-width: 10000px;">
-      {{ content }}</main>
-      {% include "footer.html" %}
-      {% include "scripts.html" %}
+    <main class="content-wrapper">{{ content }}</main>
+    {% include "footer.html" %}
   </body>
 </html>

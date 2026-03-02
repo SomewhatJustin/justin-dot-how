@@ -3,25 +3,11 @@ layout: homepage-layout.html
 title: Home
 ---
 
-<section class="home-intro" aria-labelledby="intro-heading">
+<section aria-labelledby="intro-heading">
   <h1 id="intro-heading">Hi, I'm Justin.</h1>
-  <p>I'm a software engineer based in Austin. I like to <a href="/photography">take pictures</a>, <a href="/blog">write</a>, and work on <a href="/projects">projects</a>.</p>
+  <p>I'm a software engineer in Austin.</p>
   <p>
-    <a class="button primary" href="/blog">Read the blog</a>
-    <a class="button" href="/photography">View photography</a>
+    <a href="/about">About</a> · <a href="/blog">Blog</a> · <a href="/projects">Projects</a> ·
+    <a href="/photography">Photography</a>
   </p>
-  <hr class="section-divider" />
-</section>
-
-<section aria-labelledby="latest-heading">
-  <h2 id="latest-heading">Latest writing</h2>
-  <ul class="post-list compact">
-    {%- for post in collections.post | slice: 0, 5 -%}
-      <li class="post-list-item">
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        <span class="post-list-date">{{ post.date | date: "MMM d, yyyy" }}</span>
-      </li>
-    {%- endfor -%}
-  </ul>
-  <p class="more-link"><a href="/blog">All posts →</a></p>
 </section>

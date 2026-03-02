@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/main.css" />
     <title>{% if title %}{{ title }} - {% endif %}Justin Fowler's Website</title>
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}Justin Fowler's Website{% endif %}" />
     <meta property="og:description" content="{{ content | strip_html | truncate: 160 }}" />
@@ -18,7 +17,6 @@
     <meta property="og:image" content="https://justin.how{{ imageUrl }}" />
     {% endif %}
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}Justin Fowler's Website{% endif %}" />
     <meta name="twitter:description" content="{{ content | strip_html | truncate: 160 }}" />
@@ -26,17 +24,19 @@
     <meta name="twitter:image" content="https://justin.how{{ imageUrl }}" />
     {% endif %}
   </head>
-  <body class="">
+  <body>
     {% include "header.html" %}
-    <main>
+
+    <main class="content-wrapper">
       {% if title %}
-        <h1>{{ title }}</h1>
-        {% if date %}
-          <p id="date">{{ date | date: "%b %d, %Y" }}</p>
-        {% endif %}
+      <h1>{{ title }}</h1>
+      {% if date %}
+      <p id="date">{{ date | date: "%b %d, %Y" }}</p>
       {% endif %}
-      {{ content }}</main>
-      {% include "scripts.html" %}
-    
+      {% endif %}
+      {{ content }}
+    </main>
+
+    {% include "footer.html" %}
   </body>
 </html>

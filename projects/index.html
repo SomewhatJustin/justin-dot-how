@@ -3,207 +3,38 @@ layout: page-layout.html
 title: Projects
 ---
 
-<style>
-  /* ── Project grid layout ── */
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-top: 2.5rem;
-  }
-
-  @media (min-width: 640px) {
-    .project-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  /* ── Per-card accent colors ── */
-  .project-grid .project-card[data-accent="green"]  { --card-accent: #40826d; }
-  .project-grid .project-card[data-accent="pink"]   { --card-accent: #c2185b; }
-  .project-grid .project-card[data-accent="amber"]  { --card-accent: #d97706; }
-  .project-grid .project-card[data-accent="blue"]   { --card-accent: #3b82f6; }
-  .project-grid .project-card[data-accent="purple"] { --card-accent: #8b5cf6; }
-  .project-grid .project-card[data-accent="teal"]   { --card-accent: #0d9488; }
-
-  /* ── Card overrides ── */
-  .project-grid .project-card {
-    border: 1px solid var(--accent-color-subtle);
-    border-left: 3px solid var(--card-accent, var(--accent));
-    border-radius: 0 12px 12px 0;
-    padding: 1.25rem 1.25rem 1.1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-grid .project-card::before {
-    background: radial-gradient(ellipse, var(--card-accent, var(--accent)), transparent 60%);
-  }
-
-  .project-grid .project-card:hover {
-    border-color: var(--accent-color-subtle);
-    border-left-color: var(--card-accent, var(--accent));
-  }
-
-  /* ── Card meta row (pill + tech) ── */
-  .project-card-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0.8rem;
-    flex-wrap: wrap;
-  }
-
-  .project-tag {
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    padding: 0.2em 0.65em;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--card-accent, var(--accent)) 14%, transparent);
-    color: var(--card-accent, var(--accent));
-    flex-shrink: 0;
-  }
-
-  .project-langs {
-    font-size: 0.72rem;
-    opacity: 0.5;
-    letter-spacing: 0.03em;
-    text-align: right;
-  }
-
-  /* ── Card title ── */
-  .project-grid .project-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.45rem;
-    line-height: 1.25;
-  }
-
-  .project-grid .project-card h3 a {
-    color: var(--heading-color);
-    text-decoration: none;
-  }
-
-  .project-grid .project-card h3 a:hover {
-    color: var(--card-accent, var(--accent));
-    text-decoration: none;
-  }
-
-  /* ── Card description ── */
-  .project-grid .project-card p {
-    font-size: 0.9rem;
-    line-height: 1.65;
-    opacity: 0.8;
-    margin-bottom: 0;
-    flex-grow: 1;
-  }
-
-  .project-grid .project-card p code {
-    font-family: Consolas, Monaco, monospace;
-    background: var(--accent-color-subtle);
-    padding: 0.1em 0.35em;
-    border-radius: 3px;
-    font-size: 0.85em;
-  }
-
-  /* ── Card link ── */
-  .project-link {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--card-accent, var(--accent));
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    opacity: 0.9;
-    transition: opacity 0.15s ease;
-  }
-
-  .project-link:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: var(--card-accent, var(--accent));
-  }
-
-  /* ── Staggered reveal ── */
-  @keyframes cardReveal {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .project-grid .project-card {
-    animation: cardReveal 0.35s ease both;
-  }
-  .project-grid .project-card:nth-child(1) { animation-delay: 0.04s; }
-  .project-grid .project-card:nth-child(2) { animation-delay: 0.09s; }
-  .project-grid .project-card:nth-child(3) { animation-delay: 0.14s; }
-  .project-grid .project-card:nth-child(4) { animation-delay: 0.19s; }
-  .project-grid .project-card:nth-child(5) { animation-delay: 0.24s; }
-  .project-grid .project-card:nth-child(6) { animation-delay: 0.29s; }
-</style>
-
-<div class="project-grid">
-
-  <div class="project-card" data-accent="green">
-    <div class="project-card-meta">
-      <span class="project-tag">Work</span>
-      <span class="project-langs">React Native · Kotlin</span>
-    </div>
-    <h3><a href="https://futocore.futo.org/" target="_blank" rel="noopener noreferrer">FUTOcore Software Store</a></h3>
-    <p>A privacy-respecting Android app store built on open-source principles. My work spans the mobile app (React Native) and a high-performance payment library written in Kotlin.</p>
-    <a class="project-link" href="https://futocore.futo.org/" target="_blank" rel="noopener noreferrer">Explore FUTOcore &rarr;</a>
-  </div>
-
-  <div class="project-card" data-accent="pink">
-    <div class="project-card-meta">
-      <span class="project-tag">Work</span>
-      <span class="project-langs">React · AWS · Tailwind</span>
-    </div>
-    <h3><a href="https://www.youtube.com/watch?v=7ARnEKlHlis" target="_blank" rel="noopener noreferrer">GreenLight Grocery</a></h3>
-    <p>B2B ordering made simple: a platform for restaurants to source inventory directly from suppliers—think DoorDash, but for wholesale. Built with React, AWS Lambdas, and Serverless Framework.</p>
-    <a class="project-link" href="https://www.youtube.com/watch?v=7ARnEKlHlis" target="_blank" rel="noopener noreferrer">Watch the demo &rarr;</a>
-  </div>
-
-  <div class="project-card" data-accent="amber">
-    <div class="project-card-meta">
-      <span class="project-tag">Product</span>
-      <span class="project-langs">Indeed · Incubator</span>
-    </div>
-    <h3><a href="https://www.indeed.com/career-advice/interviewing/one-way-video-interview" target="_blank" rel="noopener noreferrer">One-way Video Interviews at Indeed</a></h3>
-    <p>As a Product Manager in Indeed's Incubator, I led research and product definition for the company's first asynchronous video interview feature, improving the job seeker experience at scale.</p>
-    <a class="project-link" href="https://www.indeed.com/career-advice/interviewing/one-way-video-interview" target="_blank" rel="noopener noreferrer">Read more &rarr;</a>
-  </div>
-
-  <div class="project-card" data-accent="blue">
-    <div class="project-card-meta">
-      <span class="project-tag">Open Source</span>
-      <span class="project-langs">Rust · Whisper.cpp</span>
-    </div>
-    <h3><a href="https://github.com/SomewhatJustin/escucha" target="_blank" rel="noopener noreferrer">escucha</a></h3>
-    <p>A local voice dictation tool for Linux. Hold a key, speak, release—it transcribes audio locally using Whisper.cpp and pastes the text into whatever field is focused. No cloud, no subscriptions.</p>
-    <a class="project-link" href="https://github.com/SomewhatJustin/escucha" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card" data-accent="purple">
-    <div class="project-card-meta">
-      <span class="project-tag">Open Source</span>
-      <span class="project-langs">TypeScript · Next.js · tRPC</span>
-    </div>
-    <h3><a href="https://github.com/SomewhatJustin/stonefruit" target="_blank" rel="noopener noreferrer">Stonefruit</a></h3>
-    <p>A self-hostable, TypeScript-only Slack alternative. Built with Next.js, Prisma, and tRPC—a full-stack messaging app you can run on your own infrastructure.</p>
-    <a class="project-link" href="https://github.com/SomewhatJustin/stonefruit" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card" data-accent="teal">
-    <div class="project-card-meta">
-      <span class="project-tag">Open Source</span>
-      <span class="project-langs">Python · Ollama · LLM</span>
-    </div>
-    <h3><a href="https://github.com/SomewhatJustin/sobsidian" target="_blank" rel="noopener noreferrer">sobsidian</a></h3>
-    <p>Semantic search for Obsidian vaults using local LLMs. Embeds your notes with <code>nomic-embed-text</code>, then lets an LLM answer questions about them using tool calling—all running locally.</p>
-    <a class="project-link" href="https://github.com/SomewhatJustin/sobsidian" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
-  </div>
-
-</div>
+<ul class="project-list">
+  <li class="project-item">
+    <a href="https://futocore.futo.org/" target="_blank" rel="noopener noreferrer"
+      >FUTOcore Software Store</a
+    >
+  </li>
+  <li class="project-item">
+    <a href="https://www.youtube.com/watch?v=7ARnEKlHlis" target="_blank" rel="noopener noreferrer"
+      >GreenLight Grocery</a
+    >
+  </li>
+  <li class="project-item">
+    <a
+      href="https://www.indeed.com/career-advice/interviewing/one-way-video-interview"
+      target="_blank"
+      rel="noopener noreferrer"
+      >One-way Video Interviews at Indeed</a
+    >
+  </li>
+  <li class="project-item">
+    <a href="https://github.com/SomewhatJustin/escucha" target="_blank" rel="noopener noreferrer"
+      >escucha</a
+    >
+  </li>
+  <li class="project-item">
+    <a href="https://github.com/SomewhatJustin/stonefruit" target="_blank" rel="noopener noreferrer"
+      >Stonefruit</a
+    >
+  </li>
+  <li class="project-item">
+    <a href="https://github.com/SomewhatJustin/sobsidian" target="_blank" rel="noopener noreferrer"
+      >sobsidian</a
+    >
+  </li>
+</ul>

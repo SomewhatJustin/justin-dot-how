@@ -1,649 +1,182 @@
-/* Use a single, fast, system font stack */
-
-/* === Reset & Base Styles === */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
-  /* Light Mode (Default) */
-  --bg-color: #fdfdfd; /* Off-white */
-  --text-color: #1a1a1a; /* Soft black */
-  --heading-color: #101010;
-  --accent: #40826d; /* Viridian */
-  --container-width: 72ch; /* Unified content width */
-  --link-color: var(--accent);
-  --link-hover-color: #2f5f52;
-  /* Subtle nav hover (darken slightly in light mode) */
-  --nav-link-hover-color: color-mix(in srgb, var(--text-color) 85%, black);
-  --accent-color-subtle: #e2e8f0; /* Very light gray/slate for borders/bg */
-  --card-bg: #ffffff;
-  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07);
-
-  /* Dark Mode */
-  --bg-color-dark: #111111; /* Slightly softer than pure black */
-  --text-color-dark: #e5e5e5; /* Light gray */
-  --heading-color-dark: #f5f5f5;
-  --link-color-dark: #56a892; /* Lighter viridian for dark mode */
-  --link-hover-color-dark: #7dc0af; /* Softer hover in dark */
-  --accent-color-subtle-dark: #1f1f1f; /* Dark gray for borders/bg */
-  --card-bg-dark: #1a1a1a;
-  --card-shadow-dark:
-    0 4px 6px -1px rgba(255, 255, 255, 0.03), 0 2px 4px -2px rgba(255, 255, 255, 0.03);
-  --card-hover-shadow-dark:
-    0 10px 15px -3px rgba(255, 255, 255, 0.05), 0 4px 6px -4px rgba(255, 255, 255, 0.05);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-    --heading-color: var(--heading-color-dark);
-    --link-color: var(--link-color-dark);
-    --link-hover-color: var(--link-hover-color-dark);
-    /* Subtle nav hover (lighten slightly in dark mode) */
-    --nav-link-hover-color: color-mix(in srgb, var(--text-color) 85%, white);
-    --accent-color-subtle: var(--accent-color-subtle-dark);
-    --card-bg: var(--card-bg-dark);
-    --card-shadow: var(--card-shadow-dark);
-    --card-hover-shadow: var(--card-hover-shadow-dark);
-  }
+  --bg: #fff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --line: #e5e5e5;
+  --link: #2b6d5a;
 }
 
 body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family:
-    "Atkinson Hyperlegible",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    "Liberation Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  font-size: 1.1rem;
-  line-height: 1.7;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding-top: 80px; /* Space for sticky header */
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Sticky footer layout */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* Larger base type on wide screens */
-@media (min-width: 1100px) {
-  body {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1400px) {
-  body {
-    font-size: 1.35rem;
-  }
+.site-header {
+  border-bottom: 1px solid var(--line);
 }
 
-.content-wrapper {
-  max-width: var(--container-width);
+.nav-container {
+  max-width: 70ch;
   margin: 0 auto;
-  padding: 4rem 1.5rem; /* Generous vertical spacing */
-  min-width: 0; /* Allow children to shrink within viewport */
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-/* Tighter reading measure for posts */
+.nav-brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+main,
+.content-wrapper {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-content,
 .post-content {
-  max-width: 72ch;
-  overflow-wrap: anywhere; /* Break long strings/URLs instead of widening */
-}
-
-/* Widen layout on homepage for a grander feel */
-/* Homepage uses same width for consistency */
-body.homepage .content-wrapper {
-  max-width: var(--container-width);
-}
-
-/* Allow main content to grow and push footer to the bottom on short pages */
-main {
-  flex: 1 0 auto;
-  min-width: 0; /* Prevent long content from widening viewport in flex layout */
-  width: 100%;
+  padding-top: 2rem;
 }
 
 h1,
 h2,
 h3 {
-  font-family: inherit;
-  font-weight: 700;
-  color: var(--heading-color);
-  line-height: 1.3;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem); /* Responsive heading size */
-  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 4vw + 0.5rem, 2.5rem);
-  margin-bottom: 2rem;
-  margin-top: 4rem; /* Space between sections */
+  font-size: 1.4rem;
+  margin-top: 2rem;
 }
 
 h3 {
-  font-size: clamp(1.2rem, 3vw + 0.3rem, 1.5rem);
-  margin-bottom: 0.75rem;
-  color: var(--heading-color); /* Ensure card headings have correct color */
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin: 0 0 1rem;
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: none; /* Remove underlines by default */
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline; /* Underline on hover */
+  color: var(--link);
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Remove extra space below images */
+  display: block;
 }
 
-/* Simple home intro */
-.section-divider {
-  border: 0;
-  border-top: 1px solid var(--accent-color-subtle);
-  margin: 2rem 0 0;
-}
-
-/* === Header === */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(var(--bg-color-rgb, 253, 253, 253), 0.85); /* Slightly transparent */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--accent-color-subtle);
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-/* Add RGB versions for transparency */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color-rgb: 253, 253, 253;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color-rgb: 17, 17, 17;
-  }
-}
-
-.nav-container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-brand a {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: var(--heading-color);
-  text-decoration: none;
-}
-
-/* Subtle, fun brand accent on homepage */
-body.homepage .nav-brand a {
-  color: var(--heading-color);
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem; /* Increased spacing */
-}
-
-.nav-links a {
-  font-size: 1rem;
-  color: var(--text-color);
-  text-decoration: none;
-  letter-spacing: 0.03em; /* Slight letter spacing */
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  color: var(--nav-link-hover-color);
-  text-decoration: none;
-}
-
-/* Active nav link accent */
-.nav-links a.active {
-  color: var(--accent);
-}
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
-  height: 3px;
-  border-radius: 2px;
-  background: currentColor;
-  opacity: 0.6;
-}
-
-/* === Removed hero styles (old homepage) === */
-
-.button {
-  display: inline-block;
-  padding: 0.7rem 1rem;
-  border: 1px solid var(--accent-color-subtle);
-  border-radius: 999px;
-  color: var(--text-color);
-  text-decoration: none;
-  background: var(--card-bg);
-  box-shadow: var(--card-shadow);
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    border-color 0.15s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--card-hover-shadow);
-  text-decoration: none;
-}
-
-.button.primary {
-  border-color: var(--accent);
-  color: white;
-  background: var(--accent);
-}
-
-/* === Removed marquee/pill styles (unused) === */
-
-/* === Removed bio section (unused) === */
-
-/* === Removed explore/cards (unused) === */
-
-/* === Removed featured cards (unused) === */
-
-/* === Removed old post grid cards (unused) === */
-
-/* === Removed filmstrip (unused) === */
-
-/* === Footer === */
 .site-footer {
-  border-top: 1px solid var(--accent-color-subtle);
-  padding: 2rem 0;
-  margin-top: 4rem;
-  flex-shrink: 0; /* Prevent footer from shrinking */
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
 }
 
 .footer-container {
-  max-width: var(--container-width);
+  max-width: 70ch;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  gap: 1rem;
+  padding: 1.25rem 1rem;
+  color: var(--muted);
   font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.7;
 }
 
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  color: inherit; /* Inherit faded color */
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: var(--link-hover-color);
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* === Mobile Navigation === */
-@media (max-width: 768px) {
-  body {
-    padding-top: 60px; /* Adjust for smaller header */
-  }
-
-  .site-header {
-    background-color: rgba(var(--bg-color-rgb), 0.95); /* Less transparent on mobile */
-  }
-
-  .nav-container {
-    height: 60px;
-    padding: 0 1rem; /* Match content padding for perfect left alignment */
-  }
-
-  .nav-links {
-    display: flex; /* Always show navigation */
-    gap: 1rem; /* Smaller gap on mobile */
-  }
-
-  .nav-links a {
-    font-size: 0.9rem; /* Smaller font on mobile */
-  }
-
-  .content-wrapper {
-    padding: 2rem 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
-  /* Removed old hero mobile override */
-}
-
-/* Removed page fade-in and unused utilities */
-
-/* Photography image element */
-.photo-item {
-  /* Re-apply some safe defaults or adjust as needed */
-  display: block; /* Changed from inline-block for better centering/layout */
-  margin: 2rem auto; /* Add some vertical space between photos */
-  max-height: 85vh;
-  width: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-@media (min-width: 769px) {
-  .photo-item {
-    max-width: 90%;
-  }
-}
-
-/* === Blog Post List === */
 .post-list {
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
-}
-
-.post-list-item {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--accent-color-subtle);
-}
-
-.post-list.compact .post-list-item {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0;
-  border: 0;
-}
-
-.post-list.compact .post-list-item a {
-  font-size: 1rem;
-  font-weight: 500;
-  display: inline;
   margin: 0;
 }
 
+.post-list-item {
+  margin: 0 0 0.8rem;
+}
+
 .post-list.compact .post-list-date {
+  margin-left: 0.45rem;
+}
+
+.post-list-date,
+.post-meta,
+#date {
+  color: var(--muted);
   font-size: 0.9rem;
-  opacity: 0.6;
-  margin-left: 0.5rem;
 }
 
-.post-list.compact {
-  margin-top: 1rem;
-}
-
-.post-list-item:last-child {
-  border-bottom: none;
-}
-
-.post-list-item a {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: var(--heading-color);
-  text-decoration: none;
-  display: block; /* Make link take full width */
-  margin-bottom: 0.25rem;
-}
-
-.post-list-item a:hover {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-
-.post-list-date {
-  font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.7;
-}
-
-/* === Page Specific Styles === */
-.page-content {
-  padding-top: 6rem; /* Increased top padding for standard pages like About */
-}
-
-/* === Project List === */
 .project-list {
-  margin-top: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .project-item {
-  margin-bottom: 2.5rem;
-}
-
-.project-item h3 {
-  font-family: inherit;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.project-item h3 a {
-  color: var(--heading-color);
-  text-decoration: none;
-}
-
-.project-item h3 a:hover {
-  text-decoration: underline;
-  color: var(--link-color);
-}
-
-.project-item p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
-/* === Blog Post Specific Styles === */
-.post-header {
-  margin-bottom: 1rem; /* Tighten space below published line */
-  padding-bottom: 0.75rem;
-  /* border-bottom: 1px solid var(--accent-color-subtle); Removed */
-}
-
-.post-header h1 {
-  margin-bottom: 0.5rem; /* Smaller margin below title */
-}
-
-.post-meta {
-  font-size: 1rem;
-  color: var(--text-color);
-  opacity: 0.7;
-  margin-bottom: 0; /* Remove default paragraph margin */
-}
-
-/* Post title accent */
-.post-header .title-accent {
-  width: 88px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--accent);
-  margin: 0.5rem 0 0.25rem;
-}
-
-.post-content article h2, /* Target headings within the post */
-.post-content article h3,
-.post-content article h4 {
-  font-family: inherit; /* Single font across the site */
-  font-weight: 600;
-  color: var(--heading-color);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.post-content article h2 {
-  font-size: 1.6rem;
-}
-
-.post-content article h3 {
-  font-size: 1.3rem;
-}
-
-.post-content article p {
-  font-size: 1.1rem; /* Slightly larger body text for readability */
-  line-height: 1.8; /* Generous line height */
-  margin-bottom: 1.5rem;
-}
-@media (min-width: 1100px) {
-  .post-content {
-    max-width: 72ch;
-  }
-  .post-content article p {
-    font-size: 1.35rem;
-    line-height: 2;
-  }
-}
-
-/* Even larger post text on very wide screens */
-@media (min-width: 1400px) {
-  .post-content article p {
-    font-size: 1.45rem;
-    line-height: 2.1;
-  }
+  margin: 0 0 1rem;
 }
 
 .post-content article ul,
 .post-content article ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
 }
 
-.post-content article li {
-  margin-bottom: 0.75rem;
-}
-
-.post-content article blockquote {
-  border-left: 4px solid var(--accent-color-subtle);
-  padding-left: 1.5rem;
-  margin: 2rem 0;
-  font-style: italic;
-  color: var(--text-color);
-  opacity: 0.9;
-}
-
-/* Basic Code Block Styling */
 .post-content article pre {
-  background-color: var(--accent-color-subtle);
-  padding: 1.5rem;
-  border-radius: 6px;
+  background: #f6f6f6;
+  padding: 0.85rem;
   overflow-x: auto;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
 }
 
 .post-content article code {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  background-color: var(--accent-color-subtle);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.9em;
 }
-/* Allow inline code to wrap on small screens */
+
 .post-content article :not(pre) > code {
-  white-space: normal;
-  word-break: break-word;
+  background: #f6f6f6;
+  padding: 0.08em 0.25em;
 }
 
-.post-content article pre code {
-  background-color: transparent;
-  padding: 0;
-  font-size: inherit;
-  border-radius: 0;
+.photo-item {
+  margin: 0 auto 1.25rem;
+  max-height: 85vh;
+  width: auto;
 }
 
-/* About page lede */
-/* Removed page lede (unused) */
-
-/* Project cards */
-.project-card {
-  background: var(--card-bg);
-  border: 1px solid var(--accent-color-subtle);
-  border-radius: 12px;
-  padding: 1.25rem 1.25rem 1.4rem;
-  box-shadow: var(--card-shadow);
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-  margin-bottom: 1.25rem;
-}
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: -40% -40% auto -40%;
-  height: 70%;
-  filter: blur(36px) saturate(120%);
-  opacity: 0.25;
-  pointer-events: none;
-  background: radial-gradient(ellipse, var(--accent), transparent 60%);
-}
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--card-hover-shadow);
-  border-color: transparent;
+@media (max-width: 640px) {
+  .nav-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
