@@ -3,8 +3,35 @@ layout: photos-layout.html
 title: Photography
 ---
 
-    {% for photo in collections.photos %}
-        <img src="/{{ photo.path | url }}" class="photo-item" loading="lazy" alt="{{ photo.name }}">
-    {% endfor %}
-  
-  
+<div class="photo-grid" id="photo-gallery">
+  {% for photo in collections.photos %}
+  <a
+    class="photo-link"
+    href="{{ photo.full.src }}"
+    data-pswp-width="{{ photo.full.width }}"
+    data-pswp-height="{{ photo.full.height }}"
+    aria-label="Open photo"
+  >
+    <picture>
+      {% for source in photo.thumbnailSources %}
+      <source
+        type="{{ source.type }}"
+        srcset="{{ source.srcset }}"
+        sizes="(min-width: 1000px) 31vw, (min-width: 680px) 45vw, 100vw"
+      />
+      {% endfor %}
+      <img
+        src="{{ photo.thumbnail.src }}"
+        width="{{ photo.thumbnail.width }}"
+        height="{{ photo.thumbnail.height }}"
+        loading="lazy"
+        decoding="async"
+        alt=""
+      />
+    </picture>
+    {% if photo.caption %}
+    <span class="photo-caption">{{ photo.caption }}</span>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>

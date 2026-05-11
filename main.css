@@ -168,15 +168,72 @@ img {
   padding: 0.08em 0.25em;
 }
 
-.photo-item {
-  margin: 0 auto 1.25rem;
-  max-height: 85vh;
-  width: auto;
+.photos-content {
+  max-width: 1120px;
+}
+
+.photos-content h1 {
+  margin-bottom: 1.5rem;
+}
+
+.photo-grid {
+  column-count: 3;
+  column-gap: 0.75rem;
+}
+
+.photo-link {
+  display: block;
+  margin: 0 0 0.75rem;
+  break-inside: avoid;
+  color: inherit;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.photo-link img {
+  width: 100%;
+  height: auto;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.photo-link:hover img {
+  opacity: 0.9;
+  transform: scale(1.015);
+}
+
+.photo-caption {
+  display: none;
+}
+
+.pswp__custom-caption {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.55rem 0.75rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 70%);
+  pointer-events: none;
 }
 
 @media (max-width: 640px) {
   .nav-container {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .photo-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .photo-grid {
+    column-count: 1;
   }
 }
