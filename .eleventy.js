@@ -9,7 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("main.css")
   eleventyConfig.addPassthroughCopy("drinks.css")
   eleventyConfig.addPassthroughCopy("_headers")
-  eleventyConfig.addPassthroughCopy(".well-known")
+  eleventyConfig.addPassthroughCopy("_redirects")
+  eleventyConfig.addPassthroughCopy("polycentric.json")
   eleventyConfig.addPassthroughCopy({ "node_modules/photoswipe/dist": "assets/photoswipe" })
 
   // Passthrough copy for the assets folder
