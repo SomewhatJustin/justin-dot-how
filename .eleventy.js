@@ -5,9 +5,11 @@ const Image = require("@11ty/eleventy-img")
 const photoMetadata = require("./_data/photo-metadata.json")
 
 module.exports = function (eleventyConfig) {
-  // Passthrough copies for CSS files
+  // Passthrough copies for CSS files and static hosting configuration
   eleventyConfig.addPassthroughCopy("main.css")
   eleventyConfig.addPassthroughCopy("drinks.css")
+  eleventyConfig.addPassthroughCopy("_headers")
+  eleventyConfig.addPassthroughCopy(".well-known")
   eleventyConfig.addPassthroughCopy({ "node_modules/photoswipe/dist": "assets/photoswipe" })
 
   // Passthrough copy for the assets folder
