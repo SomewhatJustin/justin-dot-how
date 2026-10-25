@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "justin-internal-hub",
+  "account_id": "692ece0608133b6afd27b995dd70d94e",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "internal.justin.how", "custom_domain": true }],
+  "rules": [{ "type": "Text", "globs": ["**/*.html", "**/*.css"], "fallthrough": true }],
+  "vars": {
+    "ALLOWED_EMAIL": "justinfowler1996@gmail.com",
+    "ACCESS_AUD": "28738a01d92da84847ad67b856d8d7ef8cab1bc61ee089b31eb56a9f9da8c32e",
+  },
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+}
