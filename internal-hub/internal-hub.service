@@ -1,0 +1,17 @@
+[Unit]
+Description=Tailnet-only internal project hub
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.local/share/internal-hub/site
+ExecStart=/usr/bin/python3 -m http.server 8791 --bind 127.0.0.1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=default.target
