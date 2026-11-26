@@ -1,7 +1,7 @@
 # Internal project hub
 
 `https://internal.justin.how` is a public, empty redirect to
-`https://openclaw-thinko.tail6900fe.ts.net/internal/`. The page itself is served
+`https://elitedesk-1.tail6900fe.ts.net:10004/internal/`. The page itself is served
 only over Tailscale. There is no Cloudflare Access application, account login,
 or email verification. The browser address changes to the Tailscale URL.
 
@@ -14,7 +14,7 @@ The root `.eleventyignore` excludes this directory from the public Pages build.
 ./internal-hub/deploy-tailnet.sh
 ```
 
-This copies only HTML/CSS and the user service to `openclaw-thinko`. The service
+This copies only HTML/CSS and the user service to `elitedesk-1`. The service
 listens on `127.0.0.1:8791`. Tailscale Serve publishes it at `/internal` with
 HTTPS and restricts network access to the tailnet. Existing `/` and `/sports`
 handlers are preserved. Tailscale manages certificate renewal.

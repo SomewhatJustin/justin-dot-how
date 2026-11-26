@@ -2,7 +2,7 @@ import assert from "node:assert/strict"
 import { test } from "node:test"
 import worker from "./worker.js"
 
-const destination = "https://openclaw-thinko.tail6900fe.ts.net/internal/"
+const destination = "https://elitedesk-1.tail6900fe.ts.net:10004/internal/"
 
 test("the public hostname serves only a redirect to the private hub", async () => {
   const response = worker.fetch(new Request("https://internal.justin.how/"))

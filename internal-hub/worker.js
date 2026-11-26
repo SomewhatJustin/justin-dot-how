@@ -1,4 +1,4 @@
-const HUB_URL = "https://openclaw-thinko.tail6900fe.ts.net/internal/"
+const HUB_URL = "https://elitedesk-1.tail6900fe.ts.net:10004/internal/"
 
 export default {
   fetch(request) {
